@@ -65,6 +65,7 @@
   .poll-email:focus{outline:none;border-color:#378ADD;}
   .poll-btn{width:100%;padding:10px 0;border-radius:8px;background:#378ADD;color:#fff;border:none;font-size:14px;cursor:pointer;margin-top:1rem;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:6px;}
   .poll-btn:hover{background:#185FA5;}
+  .poll-btn:disabled{opacity:0.6;cursor:not-allowed;}
   .poll-success{text-align:center;padding:1.5rem;display:none;}
   .poll-success i{font-size:36px;color:#1D9E75;display:block;margin-bottom:0.75rem;}
   .poll-success h3{font-size:16px;font-weight:500;color:#1a1a1a;margin-bottom:0.5rem;}
@@ -222,40 +223,35 @@
   <p>© 2026 Tooltap. Your search ends here.</p>
 </footer>
 
-<!-- Tally hidden form submission -->
 <script>
-const TALLY_FORM_ID = 'ODE8RM';
-
 function selectOpt(el,group){
   document.querySelectorAll('#'+group+' .poll-opt').forEach(o=>o.classList.remove('selected'));
   el.classList.add('selected');
 }
 
-async function submitToTally(data){
+async function sendToTally(payload){
   try {
-    await fetch(`https://tally.so/r/${TALLY_FORM_ID}`, {
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify(data),
-      mode:'no-cors'
+    const formData = new FormData();
+    Object.keys(payload).forEach(k => formData.append(k, payload[k]));
+    await fetch('https://tally.so/r/ODE8RM', {
+      method: 'POST',
+      body: formData,
+      mode: 'no-cors'
     });
-  } catch(e){ console.log('Tally submit:', e); }
+  } catch(e){ console.log('Tally:', e); }
 }
 
 function joinWaitlist(){
-  const email=document.getElementById('emailInput').value.trim();
-  if(!email||!email.includes('@')){
+  const email = document.getElementById('emailInput').value.trim();
+  if(!email || !email.includes('@')){
     document.getElementById('emailInput').style.borderColor='rgba(226,75,74,0.6)';
     return;
   }
   document.getElementById('emailInput').style.borderColor='';
+  sendToTally({ email: email, source: 'waitlist' });
   document.getElementById('waitlistForm').style.display='none';
   document.querySelector('.hero-sub').style.display='none';
   document.getElementById('successBanner').style.display='block';
-  submitToTally({email:email, source:'waitlist'});
-  setTimeout(()=>{
-    window.open(`https://tally.so/r/${TALLY_FORM_ID}`,'_blank');
-  }, 1500);
 }
 
 function submitPoll(){
@@ -267,20 +263,22 @@ function submitPoll(){
     alert('Please answer all 4 questions to continue.');
     return;
   }
-  const email=document.getElementById('pollEmail').value.trim();
-  submitToTally({
-    q1:q1.textContent,
-    q2:q2.textContent,
-    q3:q3.textContent,
-    q4:q4.textContent,
-    email:email,
-    source:'poll'
+  const btn = document.getElementById('pollBtn');
+  btn.disabled = true;
+  btn.innerHTML = 'Submitting... <i class="ti ti-loader"></i>';
+  const email = document.getElementById('pollEmail').value.trim();
+  sendToTally({
+    'Q1 - How do you find tools': q1.textContent.trim(),
+    'Q2 - Biggest frustration': q2.textContent.trim(),
+    'Q3 - What matters most': q3.textContent.trim(),
+    'Q4 - Open to a call': q4.textContent.trim(),
+    'Email': email,
+    'Source': 'poll'
   });
-  document.getElementById('pollQuestions').style.display='none';
-  document.getElementById('pollSuccess').style.display='block';
   setTimeout(()=>{
-    window.open(`https://tally.so/r/${TALLY_FORM_ID}`,'_blank');
-  }, 2000);
+    document.getElementById('pollQuestions').style.display='none';
+    document.getElementById('pollSuccess').style.display='block';
+  }, 800);
 }
 </script>
 </body>
