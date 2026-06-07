@@ -61,13 +61,10 @@
   .poll-opt{padding:6px 14px;border-radius:20px;font-size:13px;border:0.5px solid #ddd;background:#fff;color:#666;cursor:pointer;transition:all 0.15s;}
   .poll-opt:hover{border-color:#378ADD;color:#378ADD;}
   .poll-opt.selected{background:#E6F1FB;color:#0C447C;border-color:#85B7EB;}
-  .poll-email{width:100%;padding:10px 14px;border-radius:8px;border:0.5px solid #ddd;background:#fff;color:#1a1a1a;font-size:14px;font-family:inherit;margin-top:0.5rem;}
-  .poll-email:focus{outline:none;border-color:#378ADD;}
-  .poll-btn{width:100%;padding:10px 0;border-radius:8px;background:#378ADD;color:#fff;border:none;font-size:14px;cursor:pointer;margin-top:1rem;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:6px;}
+  .poll-btn{width:100%;padding:10px 0;border-radius:8px;background:#378ADD;color:#fff;border:none;font-size:14px;cursor:pointer;margin-top:0.5rem;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:6px;}
   .poll-btn:hover{background:#185FA5;}
-  .poll-success{text-align:center;padding:1.5rem;display:none;}
-  .poll-success i{font-size:36px;color:#1D9E75;display:block;margin-bottom:0.75rem;}
-  .poll-success h3{font-size:16px;font-weight:500;color:#1a1a1a;margin-bottom:0.5rem;}
+  .poll-success{text-align:center;padding:1rem;display:none;}
+  .poll-success i{font-size:32px;color:#1D9E75;display:block;margin-bottom:0.5rem;}
   .poll-success p{font-size:14px;color:#666;}
 
   .footer{background:#0A1628;padding:2rem;text-align:center;}
@@ -83,7 +80,7 @@
     .waitlist-form button{width:100%;justify-content:center;}
     .hero-stats{gap:1rem;}
     .nav-links{display:none;}
-    .nav-logo{width:140px;}
+    .nav-logo{height:40px;}
   }
 </style>
 </head>
@@ -150,63 +147,45 @@
     <div class="poll-title">Help us build Tooltap better</div>
     <div class="poll-sub">60 seconds — your answers directly shape what we build next.</div>
 
-    <div id="pollQuestions">
-      <div class="poll-q">
-        <div class="poll-q-label">1. How do you currently find new tools?</div>
-        <div class="poll-options" id="q1">
-          <span class="poll-opt" onclick="selectOpt(this,'q1')">Google search</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q1')">Product Hunt</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q1')">Word of mouth</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q1')">LinkedIn / Twitter</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q1')">No system</span>
-        </div>
+    <div class="poll-q">
+      <div class="poll-q-label">1. How do you currently find new tools?</div>
+      <div class="poll-options" id="q1">
+        <span class="poll-opt" onclick="selectOpt(this,'q1')">Google search</span>
+        <span class="poll-opt" onclick="selectOpt(this,'q1')">Product Hunt</span>
+        <span class="poll-opt" onclick="selectOpt(this,'q1')">Word of mouth</span>
+        <span class="poll-opt" onclick="selectOpt(this,'q1')">LinkedIn / Twitter</span>
+        <span class="poll-opt" onclick="selectOpt(this,'q1')">No system</span>
       </div>
-
-      <div class="poll-q">
-        <div class="poll-q-label">2. Biggest frustration finding the right tool?</div>
-        <div class="poll-options" id="q2">
-          <span class="poll-opt" onclick="selectOpt(this,'q2')">Too many options</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q2')">Hard to compare</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q2')">Fake reviews</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q2')">Takes too long</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q2')">No personalisation</span>
-        </div>
-      </div>
-
-      <div class="poll-q">
-        <div class="poll-q-label">3. What matters most to you in a tool directory?</div>
-        <div class="poll-options" id="q3">
-          <span class="poll-opt" onclick="selectOpt(this,'q3')">Free options first</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q3')">Video demos</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q3')">Real user reviews</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q3')">AI recommendations</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q3')">Alternatives list</span>
-        </div>
-      </div>
-
-      <div class="poll-q">
-        <div class="poll-q-label">4. Would you be open to a 15-minute feedback call?</div>
-        <div class="poll-options" id="q4">
-          <span class="poll-opt" onclick="selectOpt(this,'q4')">Yes — happy to jump on a call</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q4')">Maybe — depends on timing</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q4')">No — prefer not to</span>
-        </div>
-      </div>
-
-      <div class="poll-q">
-        <div class="poll-q-label">5. Your email <span style="font-weight:400;color:#999;">(optional — get early access)</span></div>
-        <input type="email" class="poll-email" id="pollEmail" placeholder="you@company.com" />
-      </div>
-
-      <button class="poll-btn" id="pollBtn" onclick="submitPoll()">
-        Submit answers <i class="ti ti-send"></i>
-      </button>
     </div>
 
+    <div class="poll-q">
+      <div class="poll-q-label">2. Biggest frustration finding the right tool?</div>
+      <div class="poll-options" id="q2">
+        <span class="poll-opt" onclick="selectOpt(this,'q2')">Too many options</span>
+        <span class="poll-opt" onclick="selectOpt(this,'q2')">Hard to compare</span>
+        <span class="poll-opt" onclick="selectOpt(this,'q2')">Fake reviews</span>
+        <span class="poll-opt" onclick="selectOpt(this,'q2')">Takes too long</span>
+        <span class="poll-opt" onclick="selectOpt(this,'q2')">No personalisation</span>
+      </div>
+    </div>
+
+    <div class="poll-q">
+      <div class="poll-q-label">3. What matters most to you in a tool directory?</div>
+      <div class="poll-options" id="q3">
+        <span class="poll-opt" onclick="selectOpt(this,'q3')">Free options first</span>
+        <span class="poll-opt" onclick="selectOpt(this,'q3')">Video demos</span>
+        <span class="poll-opt" onclick="selectOpt(this,'q3')">Real user reviews</span>
+        <span class="poll-opt" onclick="selectOpt(this,'q3')">AI recommendations</span>
+        <span class="poll-opt" onclick="selectOpt(this,'q3')">Alternatives list</span>
+      </div>
+    </div>
+
+    <button class="poll-btn" id="pollBtn" onclick="submitPoll()">
+      Submit answers <i class="ti ti-send"></i>
+    </button>
     <div class="poll-success" id="pollSuccess">
       <i class="ti ti-circle-check"></i>
-      <h3>Thank you for your feedback!</h3>
-      <p>Your answers shape Tooltap directly. We'll be in touch soon.</p>
+      <p>Thank you! Your feedback shapes Tooltap directly. We'll keep you posted.</p>
     </div>
   </div>
 </div>
@@ -222,26 +201,7 @@
   <p>© 2026 Tooltap. Your search ends here.</p>
 </footer>
 
-<!-- Tally hidden form submission -->
 <script>
-const TALLY_FORM_ID = 'ODE8RM';
-
-function selectOpt(el,group){
-  document.querySelectorAll('#'+group+' .poll-opt').forEach(o=>o.classList.remove('selected'));
-  el.classList.add('selected');
-}
-
-async function submitToTally(data){
-  try {
-    await fetch(`https://tally.so/r/${TALLY_FORM_ID}`, {
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify(data),
-      mode:'no-cors'
-    });
-  } catch(e){ console.log('Tally submit:', e); }
-}
-
 function joinWaitlist(){
   const email=document.getElementById('emailInput').value.trim();
   if(!email||!email.includes('@')){
@@ -252,35 +212,19 @@ function joinWaitlist(){
   document.getElementById('waitlistForm').style.display='none';
   document.querySelector('.hero-sub').style.display='none';
   document.getElementById('successBanner').style.display='block';
-  submitToTally({email:email, source:'waitlist'});
-  setTimeout(()=>{
-    window.open(`https://tally.so/r/${TALLY_FORM_ID}`,'_blank');
-  }, 1500);
 }
-
+function selectOpt(el,group){
+  document.querySelectorAll('#'+group+' .poll-opt').forEach(o=>o.classList.remove('selected'));
+  el.classList.add('selected');
+}
 function submitPoll(){
   const q1=document.querySelector('#q1 .selected');
   const q2=document.querySelector('#q2 .selected');
   const q3=document.querySelector('#q3 .selected');
-  const q4=document.querySelector('#q4 .selected');
-  if(!q1||!q2||!q3||!q4){
-    alert('Please answer all 4 questions to continue.');
-    return;
-  }
-  const email=document.getElementById('pollEmail').value.trim();
-  submitToTally({
-    q1:q1.textContent,
-    q2:q2.textContent,
-    q3:q3.textContent,
-    q4:q4.textContent,
-    email:email,
-    source:'poll'
-  });
-  document.getElementById('pollQuestions').style.display='none';
+  if(!q1||!q2||!q3){alert('Please answer all 3 questions to continue.');return;}
+  document.getElementById('pollBtn').style.display='none';
+  document.querySelectorAll('.poll-q').forEach(q=>q.style.display='none');
   document.getElementById('pollSuccess').style.display='block';
-  setTimeout(()=>{
-    window.open(`https://tally.so/r/${TALLY_FORM_ID}`,'_blank');
-  }, 2000);
 }
 </script>
 </body>
