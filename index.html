@@ -222,36 +222,31 @@
   </div>
   <p>© 2026 Tooltap. Your search ends here.</p>
 </footer>
-
+<script src="https://tally.so/widgets/embed.js"></script>
 <script>
 function selectOpt(el,group){
   document.querySelectorAll('#'+group+' .poll-opt').forEach(o=>o.classList.remove('selected'));
   el.classList.add('selected');
 }
 
-async function sendToTally(payload){
-  try {
-    const formData = new FormData();
-    Object.keys(payload).forEach(k => formData.append(k, payload[k]));
-    await fetch('https://tally.so/r/ODE8RM', {
-      method: 'POST',
-      body: formData,
-      mode: 'no-cors'
-    });
-  } catch(e){ console.log('Tally:', e); }
-}
-
 function joinWaitlist(){
-  const email = document.getElementById('emailInput').value.trim();
-  if(!email || !email.includes('@')){
+  const email=document.getElementById('emailInput').value.trim();
+  if(!email||!email.includes('@')){
     document.getElementById('emailInput').style.borderColor='rgba(226,75,74,0.6)';
     return;
   }
   document.getElementById('emailInput').style.borderColor='';
-  sendToTally({ email: email, source: 'waitlist' });
   document.getElementById('waitlistForm').style.display='none';
   document.querySelector('.hero-sub').style.display='none';
   document.getElementById('successBanner').style.display='block';
+  Tally.openPopup('ODE8RM',{
+    layout:'modal',
+    width:500,
+    hiddenFields:{
+      source:'waitlist',
+      email:email
+    }
+  });
 }
 
 function submitPoll(){
@@ -263,23 +258,20 @@ function submitPoll(){
     alert('Please answer all 4 questions to continue.');
     return;
   }
-  const btn = document.getElementById('pollBtn');
-  btn.disabled = true;
-  btn.innerHTML = 'Submitting... <i class="ti ti-loader"></i>';
-  const email = document.getElementById('pollEmail').value.trim();
-  sendToTally({
-    'Q1 - How do you find tools': q1.textContent.trim(),
-    'Q2 - Biggest frustration': q2.textContent.trim(),
-    'Q3 - What matters most': q3.textContent.trim(),
-    'Q4 - Open to a call': q4.textContent.trim(),
-    'Email': email,
-    'Source': 'poll'
+  document.getElementById('pollQuestions').style.display='none';
+  document.getElementById('pollSuccess').style.display='block';
+  Tally.openPopup('ODE8RM',{
+    layout:'modal',
+    width:500,
+    hiddenFields:{
+      source:'poll',
+      q1:q1.textContent.trim(),
+      q2:q2.textContent.trim(),
+      q3:q3.textContent.trim(),
+      q4:q4.textContent.trim()
+    }
   });
-  setTimeout(()=>{
-    document.getElementById('pollQuestions').style.display='none';
-    document.getElementById('pollSuccess').style.display='block';
-  }, 800);
 }
-</script>
+</script> 
 </body>
 </html>
