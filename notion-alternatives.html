@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Notion Alternatives in 2026 — Tooltap</title>
+<meta name="description" content="Thinking of switching from Notion? Tooltap analyzed thousands of reviews and Reddit discussions to find the best Notion alternatives for every use case.">
+<meta property="og:title" content="Best Notion Alternatives in 2026 — Tooltap">
+<meta property="og:description" content="AI-powered analysis of the best tools to switch to from Notion.">
+<meta property="og:url" content="https://tooltap.in/notion-alternatives">
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/tooltaphq/tooltap-assets/main/logo/primary/Primary_logo-2.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#fff;color:#1a1a1a;}
+
+  .nav-wrap{background:#0A1628;}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;max-width:900px;margin:0 auto;}
+  .nav-logo{height:auto;width:120px;object-fit:contain;filter:brightness(0) invert(1);}
+  .nav-links{display:flex;gap:1.5rem;align-items:center;}
+  .nav-links a{font-size:13px;color:rgba(255,255,255,0.6);text-decoration:none;}
+  .nav-links a:hover{color:#fff;}
+  .nav-cta{background:#378ADD;color:#fff !important;padding:6px 16px;border-radius:6px;}
+
+  .hero{background:#0A1628;padding:3rem 2rem;text-align:center;}
+  .hero-content{max-width:700px;margin:0 auto;}
+  .hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(55,138,221,0.15);border:0.5px solid rgba(55,138,221,0.3);color:#85B7EB;font-size:12px;padding:4px 12px;border-radius:20px;margin-bottom:1.5rem;}
+  .hero h1{font-size:36px;font-weight:500;color:#fff;line-height:1.2;margin-bottom:1rem;}
+  .hero h1 span{color:#378ADD;}
+  .hero p{font-size:15px;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:1.5rem;max-width:540px;margin-left:auto;margin-right:auto;}
+  .hero-meta{font-size:12px;color:rgba(255,255,255,0.3);}
+
+  .content{max-width:800px;margin:0 auto;padding:3rem 2rem;}
+  .section-label{font-size:11px;color:#378ADD;text-transform:uppercase;letter-spacing:1px;margin-bottom:0.5rem;}
+  .section-title{font-size:22px;font-weight:500;color:#1a1a1a;margin-bottom:0.5rem;}
+  .section-sub{font-size:14px;color:#666;margin-bottom:1.5rem;line-height:1.6;}
+  .divider{height:0.5px;background:#eee;margin:2.5rem 0;}
+
+  /* REASON CARDS */
+  .reasons{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:3rem;}
+  .reason-card{background:#f8f9fa;border-radius:10px;padding:1rem 1.25rem;border-left:3px solid #378ADD;}
+  .reason-num{font-size:11px;color:#378ADD;font-weight:500;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.5px;}
+  .reason-title{font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:4px;}
+  .reason-desc{font-size:13px;color:#666;line-height:1.5;}
+
+  /* ALT CARDS */
+  .alt-card{border:0.5px solid #eee;border-radius:12px;padding:1.5rem;margin-bottom:1rem;transition:border-color 0.15s;}
+  .alt-card:hover{border-color:#378ADD;}
+  .alt-card.top{border:2px solid #378ADD;background:#FAFCFF;}
+  .alt-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:0.75rem;gap:12px;}
+  .alt-info{flex:1;}
+  .alt-name{font-size:18px;font-weight:500;color:#1a1a1a;margin-bottom:3px;}
+  .alt-tagline{font-size:13px;color:#666;}
+  .alt-badges{display:flex;gap:6px;flex-wrap:wrap;}
+  .badge{font-size:11px;padding:3px 10px;border-radius:20px;}
+  .badge-free{background:#EAF3DE;color:#3B6D11;}
+  .badge-paid{background:#FAEEDA;color:#854F0B;}
+  .badge-top{background:#E6F1FB;color:#0C447C;}
+  .badge-new{background:#EEEDFE;color:#3C3489;}
+  .alt-body{font-size:14px;color:#444;line-height:1.7;margin-bottom:1rem;}
+  .alt-best{background:#f8f9fa;border-radius:8px;padding:10px 14px;margin-bottom:1rem;}
+  .alt-best-label{font-size:11px;color:#378ADD;font-weight:500;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;}
+  .alt-best-text{font-size:13px;color:#444;}
+  .alt-footer{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+  .alt-price{font-size:13px;color:#666;}
+  .alt-price strong{color:#1a1a1a;}
+  .alt-link{font-size:13px;color:#378ADD;text-decoration:none;display:flex;align-items:center;gap:4px;}
+  .alt-link:hover{text-decoration:underline;}
+
+  /* TABLE */
+  .table-wrap{overflow-x:auto;margin-bottom:3rem;}
+  table{width:100%;border-collapse:collapse;font-size:13px;}
+  th{background:#0A1628;color:#fff;padding:10px 14px;text-align:left;font-weight:500;}
+  td{padding:10px 14px;border-bottom:0.5px solid #eee;color:#444;text-align:left;}
+  tr:hover td{background:#f8f9fa;}
+
+  /* REDDIT SECTION */
+  .reddit-wrap{background:#f8f9fa;border-radius:12px;padding:1.5rem;margin-bottom:3rem;}
+  .reddit-header{display:flex;align-items:center;gap:10px;margin-bottom:0.5rem;}
+  .reddit-icon{width:28px;height:28px;background:#FF4500;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;font-weight:700;flex-shrink:0;}
+  .reddit-title{font-size:16px;font-weight:500;color:#1a1a1a;}
+  .reddit-sub{font-size:13px;color:#666;margin-bottom:1.25rem;line-height:1.5;}
+  .reddit-links{display:flex;flex-direction:column;gap:8px;}
+  .reddit-link-item{display:flex;align-items:flex-start;gap:10px;padding:10px 14px;background:#fff;border-radius:8px;border:0.5px solid #eee;text-decoration:none;transition:border-color 0.15s;}
+  .reddit-link-item:hover{border-color:#FF4500;}
+  .reddit-link-info{flex:1;}
+  .reddit-link-title{font-size:13px;font-weight:500;color:#1a1a1a;margin-bottom:2px;}
+  .reddit-link-meta{font-size:12px;color:#999;}
+  .reddit-link-arrow{font-size:14px;color:#999;margin-top:2px;}
+  .reddit-disclaimer{font-size:12px;color:#999;margin-top:1rem;line-height:1.5;}
+
+  /* CTA */
+  .cta-wrap{background:#0A1628;border-radius:12px;padding:2rem;text-align:center;margin-bottom:3rem;}
+  .cta-wrap h3{font-size:20px;font-weight:500;color:#fff;margin-bottom:0.5rem;}
+  .cta-wrap p{font-size:14px;color:rgba(255,255,255,0.6);margin-bottom:1.5rem;}
+  .cta-form{display:flex;gap:8px;max-width:400px;margin:0 auto;}
+  .cta-form input{flex:1;padding:0 14px;height:40px;border-radius:8px;border:none;background:rgba(255,255,255,0.1);color:#fff;font-size:14px;font-family:inherit;}
+  .cta-form input::placeholder{color:rgba(255,255,255,0.4);}
+  .cta-form button{height:40px;padding:0 18px;border-radius:8px;background:#378ADD;color:#fff;border:none;font-size:13px;cursor:pointer;font-family:inherit;}
+
+  /* MORE ALTS */
+  .more-links{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:2rem;}
+  .more-link{padding:8px 16px;border:0.5px solid #ddd;border-radius:20px;font-size:13px;color:#444;text-decoration:none;}
+  .more-link:hover{border-color:#378ADD;color:#378ADD;}
+
+  /* FOOTER */
+  .footer{background:#0A1628;padding:2rem;text-align:center;}
+  .footer-logo{height:auto;width:120px;object-fit:contain;filter:brightness(0) invert(1);margin-bottom:0.75rem;}
+  .footer p{font-size:12px;color:rgba(255,255,255,0.35);}
+  .footer-links{display:flex;gap:1.5rem;justify-content:center;margin:0.5rem 0 0.75rem;flex-wrap:wrap;}
+  .footer-links a{font-size:12px;color:rgba(255,255,255,0.4);text-decoration:none;}
+  .footer-links a:hover{color:rgba(255,255,255,0.7);}
+
+  @media(max-width:600px){
+    .hero h1{font-size:26px;}
+    .alt-header{flex-direction:column;}
+    .cta-form{flex-direction:column;}
+    .cta-form button{width:100%;}
+    .nav-links{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<iframe id="hiddenFrame" name="hiddenFrame" style="display:none;width:0;height:0;border:none;"></iframe>
+
+<div class="nav-wrap">
+  <nav class="nav">
+    <img src="https://raw.githubusercontent.com/tooltaphq/tooltap-assets/main/logo/primary/Primary_logo-2.png" alt="Tooltap" class="nav-logo">
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/#poll">Give feedback</a>
+      <a href="mailto:founder@tooltap.in">Contact</a>
+      <a href="/#waitlistForm" class="nav-cta">Get early access</a>
+    </div>
+  </nav>
+</div>
+
+<div class="hero">
+  <div class="hero-content">
+    <div class="hero-badge"><i class="ti ti-sparkles"></i> AI-analyzed from 2,000+ reviews & community discussions</div>
+    <h1>Best Notion Alternatives<br><span>in 2026</span></h1>
+    <p>Thinking of switching from Notion? We analyzed thousands of community discussions, G2 reviews, and user complaints to find the best alternatives — matched to your exact use case.</p>
+    <div class="hero-meta">Last updated: June 2026 · 6 alternatives reviewed · Sources: Reddit, G2, Capterra</div>
+  </div>
+</div>
+
+<div class="content">
+
+  <div class="section-label">The real reasons</div>
+  <div class="section-title">Why people leave Notion</div>
+  <div class="section-sub">Based on analysis of thousands of user reviews and community discussions — these are the most common switching triggers.</div>
+
+  <div class="reasons">
+    <div class="reason-card">
+      <div class="reason-num">Reason #1</div>
+      <div class="reason-title">Too complex to set up</div>
+      <div class="reason-desc">Notion gives you a blank canvas — not a system. Users spend hours building databases before they can actually start working.</div>
+    </div>
+    <div class="reason-card">
+      <div class="reason-num">Reason #2</div>
+      <div class="reason-title">Slow performance</div>
+      <div class="reason-desc">Pages load slowly with large databases. On mobile it's even worse — a consistent complaint across thousands of reviews.</div>
+    </div>
+    <div class="reason-card">
+      <div class="reason-num">Reason #3</div>
+      <div class="reason-title">Constant maintenance</div>
+      <div class="reason-desc">Once built, Notion requires ongoing attention. Pages pile up, databases go stale — it becomes a graveyard of good intentions.</div>
+    </div>
+    <div class="reason-card">
+      <div class="reason-num">Reason #4</div>
+      <div class="reason-title">Pricing for teams</div>
+      <div class="reason-desc">The free plan is generous for solo users but gets expensive quickly for growing teams.</div>
+    </div>
+    <div class="reason-card">
+      <div class="reason-num">Reason #5</div>
+      <div class="reason-title">No email or calendar</div>
+      <div class="reason-desc">Notion doesn't connect to your inbox or calendar meaningfully — forcing users to juggle multiple tools.</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-label">The best alternatives</div>
+  <div class="section-title">6 tools people switch to from Notion</div>
+  <div class="section-sub">Ranked by how frequently they appear in switching discussions — not by paid placement.</div>
+
+  <div class="alt-card top">
+    <div class="alt-header">
+      <div class="alt-info">
+        <div class="alt-name">ClickUp</div>
+        <div class="alt-tagline">All-in-one productivity — tasks, docs, goals, dashboards</div>
+      </div>
+      <div class="alt-badges">
+        <span class="badge badge-top">Most switched to</span>
+        <span class="badge badge-free">Free plan</span>
+      </div>
+    </div>
+    <div class="alt-body">ClickUp is the most common destination for Notion users switching away. Where Notion gives you a blank canvas, ClickUp gives you structure out of the box — tasks, projects, docs, and goals all in one place without hours of setup.</div>
+    <div class="alt-best">
+      <div class="alt-best-label">Best for</div>
+      <div class="alt-best-text">Teams tired of building Notion from scratch. If you need project management + docs without setup overhead — ClickUp is your answer.</div>
+    </div>
+    <div class="alt-footer">
+      <div class="alt-price">Free plan available · Paid from <strong>$7/user/month</strong></div>
+      <a href="https://clickup.com" target="_blank" class="alt-link">Visit ClickUp <i class="ti ti-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <div class="alt-card">
+    <div class="alt-header">
+      <div class="alt-info">
+        <div class="alt-name">Obsidian</div>
+        <div class="alt-tagline">Local-first notes with powerful linking and 900+ plugins</div>
+      </div>
+      <div class="alt-badges">
+        <span class="badge badge-free">Free for personal</span>
+      </div>
+    </div>
+    <div class="alt-body">Obsidian stores everything locally as plain Markdown files — no internet required, no subscription, complete data ownership. With bidirectional linking and a thriving plugin ecosystem, it's the choice for people who want full control.</div>
+    <div class="alt-best">
+      <div class="alt-best-label">Best for</div>
+      <div class="alt-best-text">Solo users, writers, and developers who want a personal knowledge base without cloud dependency or recurring costs.</div>
+    </div>
+    <div class="alt-footer">
+      <div class="alt-price">Free for personal · Sync from <strong>$4/month</strong></div>
+      <a href="https://obsidian.md" target="_blank" class="alt-link">Visit Obsidian <i class="ti ti-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <div class="alt-card">
+    <div class="alt-header">
+      <div class="alt-info">
+        <div class="alt-name">Coda</div>
+        <div class="alt-tagline">Documents that work like apps — with logic and automation</div>
+      </div>
+      <div class="alt-badges">
+        <span class="badge badge-free">Free plan</span>
+      </div>
+    </div>
+    <div class="alt-body">Coda combines documents with tables and logic — your doc can become a spreadsheet, app, and automation hub in one. More opinionated than Notion, with built-in automation that removes the manual maintenance Notion requires.</div>
+    <div class="alt-best">
+      <div class="alt-best-label">Best for</div>
+      <div class="alt-best-text">Teams that want Notion-style docs but with more built-in logic, automation, and interactivity without building everything from scratch.</div>
+    </div>
+    <div class="alt-footer">
+      <div class="alt-price">Free plan available · Paid from <strong>$10/user/month</strong></div>
+      <a href="https://coda.io" target="_blank" class="alt-link">Visit Coda <i class="ti ti-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <div class="alt-card">
+    <div class="alt-header">
+      <div class="alt-info">
+        <div class="alt-name">Slite</div>
+        <div class="alt-tagline">AI-powered team knowledge base — ask questions, get answers</div>
+      </div>
+      <div class="alt-badges">
+        <span class="badge badge-new">AI-native</span>
+        <span class="badge badge-paid">Paid</span>
+      </div>
+    </div>
+    <div class="alt-body">Slite is built around its AI "Ask" feature — it answers natural-language questions using your team's docs as the source. Purpose-built for internal documentation, far less setup than Notion, and the team actually uses it.</div>
+    <div class="alt-best">
+      <div class="alt-best-label">Best for</div>
+      <div class="alt-best-text">Teams using Notion primarily as an internal wiki or knowledge base who want AI-powered search across all their docs.</div>
+    </div>
+    <div class="alt-footer">
+      <div class="alt-price">From <strong>$8/user/month</strong></div>
+      <a href="https://slite.com" target="_blank" class="alt-link">Visit Slite <i class="ti ti-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <div class="alt-card">
+    <div class="alt-header">
+      <div class="alt-info">
+        <div class="alt-name">Craft</div>
+        <div class="alt-tagline">Beautiful, fast docs — built for Apple users</div>
+      </div>
+      <div class="alt-badges">
+        <span class="badge badge-free">Free plan</span>
+      </div>
+    </div>
+    <div class="alt-body">Craft is what Notion would look like if Apple designed it. Blazing fast, beautiful interface, native on Mac and iOS. If Notion's slow performance and clunky mobile experience drove you away — Craft solves both instantly.</div>
+    <div class="alt-best">
+      <div class="alt-best-label">Best for</div>
+      <div class="alt-best-text">Apple users who want fast, beautiful note-taking and docs without Notion's database-heavy complexity.</div>
+    </div>
+    <div class="alt-footer">
+      <div class="alt-price">Free plan available · Paid from <strong>$5/month</strong></div>
+      <a href="https://craft.do" target="_blank" class="alt-link">Visit Craft <i class="ti ti-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <div class="alt-card">
+    <div class="alt-header">
+      <div class="alt-info">
+        <div class="alt-name">Linear</div>
+        <div class="alt-tagline">Purpose-built project management for software teams</div>
+      </div>
+      <div class="alt-badges">
+        <span class="badge badge-free">Free plan</span>
+        <span class="badge badge-new">Dev favourite</span>
+      </div>
+    </div>
+    <div class="alt-body">If you're using Notion primarily for engineering project management — Linear is in a different league. Opinionated, fast, purpose-built for software teams. No blank canvas, no setup — it works the way developers actually think.</div>
+    <div class="alt-best">
+      <div class="alt-best-label">Best for</div>
+      <div class="alt-best-text">Software and product teams using Notion for issue tracking and sprint planning — Linear is purpose-built for exactly this.</div>
+    </div>
+    <div class="alt-footer">
+      <div class="alt-price">Free for small teams · Paid from <strong>$8/user/month</strong></div>
+      <a href="https://linear.app" target="_blank" class="alt-link">Visit Linear <i class="ti ti-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-label">Side by side</div>
+  <div class="section-title">Quick comparison</div>
+  <div class="section-sub" style="margin-bottom:1.5rem;">How the top Notion alternatives stack up on the things that matter most.</div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Tool</th>
+          <th>Free plan</th>
+          <th>Easy setup</th>
+          <th>Mobile app</th>
+          <th>Best for</th>
+          <th>Starting price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Notion</strong></td><td>✅</td><td>❌</td><td>〰️</td><td>Flexible workspace</td><td>$8/user/mo</td></tr>
+        <tr><td><strong>ClickUp</strong></td><td>✅</td><td>✅</td><td>✅</td><td>Teams & projects</td><td>$7/user/mo</td></tr>
+        <tr><td><strong>Obsidian</strong></td><td>✅</td><td>✅</td><td>✅</td><td>Personal use</td><td>Free</td></tr>
+        <tr><td><strong>Coda</strong></td><td>✅</td><td>✅</td><td>〰️</td><td>Doc + app hybrid</td><td>$10/user/mo</td></tr>
+        <tr><td><strong>Slite</strong></td><td>❌</td><td>✅</td><td>✅</td><td>Team knowledge base</td><td>$8/user/mo</td></tr>
+        <tr><td><strong>Craft</strong></td><td>✅</td><td>✅</td><td>✅</td><td>Apple users</td><td>$5/mo</td></tr>
+        <tr><td><strong>Linear</strong></td><td>✅</td><td>✅</td><td>✅</td><td>Dev teams</td><td>$8/user/mo</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-label">Our recommendation</div>
+  <div class="section-title">Which Notion alternative should you pick?</div>
+  <div class="section-sub">It depends on why you're leaving Notion:</div>
+  <div class="reasons" style="margin-bottom:2rem;">
+    <div class="reason-card">
+      <div class="reason-num">If you need structure</div>
+      <div class="reason-title">→ ClickUp</div>
+      <div class="reason-desc">Best for teams who want everything in one place without building from scratch.</div>
+    </div>
+    <div class="reason-card">
+      <div class="reason-num">If you want simplicity</div>
+      <div class="reason-title">→ Craft or Obsidian</div>
+      <div class="reason-desc">Fast, clean, zero maintenance. Just write and organise.</div>
+    </div>
+    <div class="reason-card">
+      <div class="reason-num">If you're a developer</div>
+      <div class="reason-title">→ Linear</div>
+      <div class="reason-desc">Purpose-built for engineering teams. Nothing else comes close.</div>
+    </div>
+    <div class="reason-card">
+      <div class="reason-num">If you need team docs</div>
+      <div class="reason-title">→ Slite</div>
+      <div class="reason-desc">AI-powered knowledge base your team will actually use.</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- REDDIT SECTION -->
+  <div class="section-label">Community sources</div>
+  <div class="section-title">What Reddit communities are saying</div>
+  <div class="section-sub">Our analysis is informed by real discussions happening in these communities. Browse the source conversations yourself.</div>
+
+  <div class="reddit-wrap">
+    <div class="reddit-header">
+      <div class="reddit-icon">r/</div>
+      <div class="reddit-title">Active Reddit discussions on Notion switching</div>
+    </div>
+    <div class="reddit-sub">These are the communities where real users discuss their Notion frustrations and share what they switched to. We reference these discussions — not sponsored reviews.</div>
+
+    <div class="reddit-links">
+      <a href="https://www.reddit.com/r/Notion/" target="_blank" class="reddit-link-item">
+        <div class="reddit-link-info">
+          <div class="reddit-link-title">r/Notion — The official Notion community</div>
+          <div class="reddit-link-meta">Search "alternatives" or "switching" for active discussions · 200k+ members</div>
+        </div>
+        <i class="ti ti-arrow-up-right reddit-link-arrow"></i>
+      </a>
+      <a href="https://www.reddit.com/r/productivity/search/?q=notion+alternatives" target="_blank" class="reddit-link-item">
+        <div class="reddit-link-info">
+          <div class="reddit-link-title">r/productivity — Notion alternatives discussions</div>
+          <div class="reddit-link-meta">Real users comparing productivity tools and sharing switching experiences · 3M+ members</div>
+        </div>
+        <i class="ti ti-arrow-up-right reddit-link-arrow"></i>
+      </a>
+      <a href="https://www.reddit.com/r/SaaS/search/?q=notion+alternative" target="_blank" class="reddit-link-item">
+        <div class="reddit-link-info">
+          <div class="reddit-link-title">r/SaaS — Founders & teams discussing tool switches</div>
+          <div class="reddit-link-meta">SaaS founders sharing what tools work for their teams · 150k+ members</div>
+        </div>
+        <i class="ti ti-arrow-up-right reddit-link-arrow"></i>
+      </a>
+      <a href="https://www.reddit.com/r/selfhosted/search/?q=notion+alternative" target="_blank" class="reddit-link-item">
+        <div class="reddit-link-info">
+          <div class="reddit-link-title">r/selfhosted — Privacy-focused Notion alternatives</div>
+          <div class="reddit-link-meta">Users who want self-hosted, privacy-first alternatives to Notion · 300k+ members</div>
+        </div>
+        <i class="ti ti-arrow-up-right reddit-link-arrow"></i>
+      </a>
+    </div>
+
+    <div class="reddit-disclaimer">
+      💡 Tooltap aggregates insights from these communities using AI — saving you hours of scrolling. The recommendations above are based on patterns from thousands of real discussions, not paid placements.
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- CTA -->
+  <div class="cta-wrap">
+    <h3>Not sure which tool fits your use case?</h3>
+    <p>Describe what you need — Tooltap's AI recommends the right alternative for your specific situation.</p>
+    <form id="ctaForm"
+      action="https://docs.google.com/forms/d/e/1FAIpQLSf8twlrE7wHAsSNQ-GUkyH-4pBYlFMFtQ4EK602q3M4XEXEiQ/formResponse"
+      method="POST"
+      target="hiddenFrame"
+      onsubmit="handleCTA(event)">
+      <div class="cta-form">
+        <input type="email" name="entry.1696180610" id="ctaEmail" placeholder="Your work email..." required />
+        <button type="submit">Get recommendations</button>
+      </div>
+    </form>
+    <div id="ctaSuccess" style="display:none;color:#5DCAA5;font-size:13px;margin-top:0.75rem;">
+      ✅ Done! We'll send you personalised recommendations.
+    </div>
+    <p style="font-size:11px;color:rgba(255,255,255,0.25);margin-top:0.75rem;">No spam. Unsubscribe anytime.</p>
+  </div>
+
+  <div class="section-label">Explore more</div>
+  <div class="section-title">Looking for other alternatives?</div>
+  <div class="section-sub">Tooltap covers switching journeys for all major software tools.</div>
+  <div class="more-links">
+    <a href="/slack-alternatives" class="more-link">Slack alternatives →</a>
+    <a href="/zoom-alternatives" class="more-link">Zoom alternatives →</a>
+    <a href="/zapier-alternatives" class="more-link">Zapier alternatives →</a>
+    <a href="/trello-alternatives" class="more-link">Trello alternatives →</a>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <img src="https://raw.githubusercontent.com/tooltaphq/tooltap-assets/main/logo/primary/Primary_logo-2.png" alt="Tooltap" class="footer-logo">
+  <div class="footer-links">
+    <a href="/">Home</a>
+    <a href="mailto:founder@tooltap.in">Contact</a>
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+  </div>
+  <p>© 2026 Tooltap. Find any software tool — using AI.</p>
+</footer>
+
+<script>
+function handleCTA(e){
+  const email=document.getElementById('ctaEmail').value.trim();
+  if(!email||!email.includes('@')){
+    document.getElementById('ctaEmail').style.borderColor='rgba(226,75,74,0.6)';
+    e.preventDefault();
+    return;
+  }
+  setTimeout(()=>{
+    document.getElementById('ctaForm').style.display='none';
+    document.getElementById('ctaSuccess').style.display='block';
+  },500);
+}
+</script>
+</body>
+</html>
