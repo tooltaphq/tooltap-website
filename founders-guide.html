@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Founder's Guide Toolstack — Tooltap.</title>
+<meta name="description" content="The optimized startup toolstack. Discover the exact software early-stage founders need across engineering, product, growth, and back-office operations.">
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/tooltaphq/tooltap-assets/main/logo/primary/Primary_logo-2.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#fff;color:#1a1a1a;}
+
+  /* Header / Hero Context matching main branding */
+  .hero-mini {background:#0A1628;padding:3rem 2rem 4rem;}
+  .nav{display:flex;align-items:center;justify-content:space-between;max-width:900px;margin:0 auto 2.5rem;}
+  .nav-logo{height:auto;width:180px;object-fit:contain;filter:brightness(0) invert(1);}
+  .nav-links{display:flex;gap:1.5rem;}
+  .nav-links a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:14px;}
+  .nav-links a:hover{color:#fff;}
+
+  .hero-content-mini{max-width:720px;margin:0 auto;text-align:left;}
+  .hero-badge-mini{display:inline-flex;align-items:center;gap:6px;background:rgba(55,138,221,0.15);border:0.5px solid rgba(55,138,221,0.3);color:#85B7EB;font-size:12px;padding:4px 12px;border-radius:20px;margin-bottom:1.25rem;}
+  .hero-mini h1{font-size:36px;font-weight:500;color:#fff;line-height:1.2;margin-bottom:1rem;}
+  .hero-mini h1 span{color:#378ADD;}
+  .hero-mini p{font-size:16px;color:rgba(255,255,255,0.7);line-height:1.6;max-width:600px;}
+
+  /* Main Document Container */
+  .guide-container {max-width:900px;margin: -2rem auto 4rem;padding: 0 2rem;position: relative;z-index: 10;}
+  
+  /* Role Sections Wrapper */
+  .role-card {background:#fff;border:1px solid #eee;border-radius:12px;padding:2rem;margin-bottom:1.5rem;box-shadow: 0 4px 20px rgba(0,0,0,0.02);}
+  .role-header {display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;border-bottom:1px solid #f5f5f5;padding-bottom:0.75rem;}
+  .role-icon {font-size:24px;color:#378ADD;background:#E6F1FB;width:44px;height:44px;border-radius:8px;display:flex;align-items:center;justify-content:center;}
+  .role-title h2 {font-size:20px;font-weight:500;color:#1a1a1a;}
+  .role-title p {font-size:13px;color:#666;margin-top:2px;}
+
+  /* Tools Sub-Grid Layout */
+  .tools-list {display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:0.5rem;}
+  @media(max-width:768px){ .tools-list {grid-template-columns:1fr;} }
+  
+  .tool-item {background:#f8f9fa;border-radius:8px;padding:1.25rem;border:0.5px solid #eaeaea;}
+  .tool-top {display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.5rem;}
+  .tool-name {font-size:15px;font-weight:600;color:#0A1628;}
+  .tool-usecase {font-size:11px;background:#E6F1FB;color:#0C447C;padding:2px 8px;border-radius:4px;font-weight:500;}
+  .tool-desc {font-size:13px;color:#555;line-height:1.5;margin-bottom:0.75rem;}
+  
+  /* Callout Tip box styling */
+  .founder-tip {background:rgba(55,138,221,0.06);border-left:4px solid #378ADD;padding:1rem 1.25rem;border-radius:0 8px  8px 0;font-size:13px;color:#333;line-height:1.5;margin-top:2rem;}
+  .founder-tip strong {color:#0A1628;}
+
+  /* Table Grid styling matching Tooltap style logic */
+  .matrix-section {margin-top:3.5rem;}
+  .matrix-table {width:100%;border-collapse:collapse;margin-top:1rem;text-align:left;font-size:14px;}
+  .matrix-table th {background:#0A1628;color:#fff;padding:12px 16px;font-weight:500;}
+  .matrix-table th:first-child{border-top-left-radius:8px;}
+  .matrix-table th:last-child{border-top-right-radius:8px;}
+  .matrix-table td {padding:14px 16px;border-bottom:1px solid #eee;color:#333;}
+  .matrix-table tr:hover td {background:#fcfdfe;}
+
+  /* Reuse Landing Footer Styles */
+  .footer{background:#0A1628;padding:2.5rem 2rem;text-align:center;margin-top:5rem;}
+  .footer-logo{height:auto;width:180px;object-fit:contain;filter:brightness(0) invert(1);margin-bottom:0.75rem;}
+  .footer p{font-size:13px;color:rgba(255,255,255,0.35);}
+  .footer-links{display:flex;gap:1.5rem;justify-content:center;margin:0.75rem 0 1rem;flex-wrap:wrap;}
+  .footer-links a{font-size:13px;color:rgba(255,255,255,0.4);text-decoration:none;}
+  .footer-links a:hover{color:rgba(255,255,255,0.7);}
+
+  @media(max-width:600px){
+    .hero-mini h1{font-size:26px;}
+    .nav-links{display:none;}
+    .nav-logo{width:140px;}
+    .role-card {padding:1.25rem;}
+    .matrix-table th:nth-child(3), .matrix-table td:nth-child(3) {display:none;} /* Responsive layout crunch */
+  }
+</style>
+</head>
+<body>
+
+<div class="hero-mini">
+  <nav class="nav">
+    <a href="/"><img src="https://raw.githubusercontent.com/tooltaphq/tooltap-assets/main/logo/primary/Primary_logo-2.png" alt="Tooltap" class="nav-logo"></a>
+    <div class="nav-links">
+      <a href="/#alternatives">Alternatives</a>
+      <a href="/#poll">Give feedback</a>
+      <a href="mailto:founder@tooltap.in">Contact</a>
+    </div>
+  </nav>
+
+  <div class="hero-content-mini">
+    <div class="hero-badge-mini"><i class="ti ti-notebook"></i> Founder Playbook Series</div>
+    <h1>The Founder's <span>Toolstack Guide</span></h1>
+    <p>A role-by-role structural framework designed to help early-stage teams balance high execution leverage with clean financial efficiency.</p>
+  </div>
+</div>
+
+<div class="guide-container">
+
+  <div class="role-card">
+    <div class="role-header">
+      <div class="role-icon"><i class="ti ti-code"></i></div>
+      <div class="role-title">
+        <h2>Product, Design & Engineering</h2>
+        <p>The Builder Archetype</p>
+      </div>
+    </div>
+    <div class="tools-list">
+      <div class="tool-item">
+        <div class="tool-top"><span class="tool-name">Figma</span><span class="tool-usecase">UI/UX Design</span></div>
+        <p class="tool-desc">The industry default standard tool for collaborative wireframing, component libraries, and validating early high-fidelity workflows without code commitment.</p>
+      </div>
+      <div class="tool-item">
+        <div class="tool-top"><span class="tool-name">Linear</span><span class="tool-usecase">Issue Tracking</span></div>
+        <p class="tool-desc">A blazingly fast alternative to legacy tools. Stripped of bloat, it enables engineers to focus exclusively on product cycles and continuous deployment workflows.</p>
+      </div>
+      <div class="tool-item">
+        <div class="tool-top"><span class="tool-name">Cursor</span><span class="tool-usecase">AI Development</span></div>
+        <p class="tool-desc">An AI-first code fork environment built natively on top of VS Code, accelerating deep iteration speeds and simplifying boilerplate code generation.</p>
+      </div>
+      <div class="tool-item">
+        <div class="tool-top"><span class="tool-name">Vercel / Render</span><span class="tool-usecase">MVP Deployment</span></div>
+        <p class="tool-desc">Cloud architecture engines that simplify the continuous integration pipeline, instantly resolving front-end deployments and small stack environments with zero specialized DevOps overhead.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header">
+      <div class="role-icon"><i class="ti ti-megaphone"></i></div>
+      <div class="role-title">
+        <h2>Marketing & Growth</h2>
+        <p>The Storyteller Archetype</p>
+      </div>
+    </div>
+    <div class="tools-list">
+      <div class="tool-item">
+        <div class="tool-top"><span class="tool-name">Framer / Webflow</span><span class="tool-usecase">Site Generation</span></div>
+        <p class="tool-desc">Visual development solutions that output production-grade marketing funnels and conversion-optimized informational assets without relying on web teams.</p>
+      </div>
+      <div class="tool-item">
+        <div class="tool-top"><span class="tool-name">Canva</span><span class="tool-usecase">Visual Assets</span></div>
+        <p class="tool-desc">A highly scalable layout platform designed to produce brand-compliant presentation materials, marketing collaterals, and targeted social ad creatives quickly.</p>
+      </div>
+      <div class="tool-item">
+        <div class="tool-top"><span class="tool-name">Perplexity / Ahrefs</span><span class="tool-usecase">Market Intel</span></div>
+        <p class="tool-desc">Advanced systems configured to evaluate structural SEO trends, competitive digital foot-printing, and high-intent industry content opportunities.</p>
+      </div>
+      <div class="tool-item">
+        <div class="tool-top"><span class="tool-name">Kit (ConvertKit)</span><span class="tool-usecase">Waitlist Logic</span></div>
+        <p class="tool-desc">An elastic email orchestration utility built to support subscriber distribution growth and structure simple nurture campaigns for inbound validation funnels.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header">
+      <div class="role-icon"><i class="ti ti-currency-dollar"></i></div>
+      <div class="role-title">
+        <h2>Sales & CRM</h2>
+        <p>The Hustler Archetype</p>
+      </div>
+    </div>
+    <div class="tools-list">
+      <div class="tool-item">
+        <div class="tool-top"><span class="tool-name">HubSpot for Startups</span><span class="tool-usecase">Core CRM</span></div>
+        <p class="tool-desc">Comprehensive database tier offering deep start-up financial subsidies, keeping early pipeline records structured before data models become complex.</p>
+      </div>
+      <div class="tool-item">
+        <div class="tool-top"><span class="tool-name">Apollo.io</span><span class="tool-usecase">B2B Prospecting</span></div>
+        <p class="tool-desc">An extensive target intelligence index providing immediate outreach verified datasets to accelerate validation across target market profiles.</p>
+      </div>
+      <div class="tool-item">
+        <div class="tool-top"><span class="tool-name">Calendly</span><span class="tool-usecase">Calendar Routing</span></div>
+        <p class="tool-desc">An explicit inbound friction reduction mechanism that automates standard timezone handshakes and protects executive delivery cadences.</p>
+      </div>
+      <div class="tool-item">
+        <div class="tool-top"><span class="tool-name">Loom</span><span class="tool-usecase">Async Demos</span></div>
+        <p class="tool-desc">High-retention asynchronous context recording application that significantly outperforms traditional textual summary notes across technical sales pipelines.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header">
+      <div class="role-icon"><i class="ti ti-briefcase"></i></div>
+      <div class="role-title">
+        <h2>Operations, Finance & Legal</h2>
+        <p>The Back Office Archetype</p>
+      </div>
+    </div>
+    <div class="tools-list">
+      <div class="tool-item">
+        <div class="tool-top"><span class="tool-name">Notion</span><span class="tool-usecase">Knowledge Base</span></div>
+        <p class="tool-desc">The internal systemic single source of truth used to institutionalize documentation, engineering spec sheets, and cross-functional operations.</p>
+      </div>
+      <div class="tool-item">
+        <div class="tool-top"><span class="tool-name">Stripe Atlas + Mercury</span><span class="tool-usecase">Corporate Rails</span></div>
+        <p class="tool-desc">A highly integrated ecosystem designed to launch entities cleanly, manage cap tables, and settle transactions via startup-centric fiscal interfaces.</p>
+      </div>
+      <div class="tool-item">
+        <div class="tool-top"><span class="tool-name">QuickBooks / Xero</span><span class="tool-usecase">Accounting Ledger</span></div>
+        <p class="tool-desc">Strict baseline accounting systems that insulate company ledgers early, preventing costly audit cleanups during subsequent venture financing stages.</p>
+      </div>
+      <div class="tool-item">
+        <div class="tool-top"><span class="tool-name">Deel / Rippling</span><span class="tool-usecase">Global Workforce</span></div>
+        <p class="tool-desc">Automated contract distribution structures that simplify border-free hiring compliance and manage international contractor payroll effortlessly.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="founder-tip">
+    <strong>💡 Operational Rule of Thumb:</strong> Postpone committing capital to any specialized stack subscription layer until the absence of that automation costs your core operation more than an hour of manual tracking every week. Lean heavily on tier allowances during initial validation phases.
+  </div>
+
+  <div class="matrix-section">
+    <h3 style="font-size: 18px; font-weight: 500; color: #1a1a1a; margin-bottom: 0.25rem;">The Architecture Matrix</h3>
+    <p style="font-size: 13px; color: #666; margin-bottom: 1rem;">Core components organized by core execution archetypes.</p>
+    
+    <table class="matrix-table">
+      <thead>
+        <tr>
+          <th>Execution Role</th>
+          <th>Anchor Infrastructure</th>
+          <th>Primary Leverage Variant</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Product</strong></td>
+          <td>Figma + Notion</td>
+          <td>Aligns product specification sheets with structural interface designs.</td>
+        </tr>
+        <tr>
+          <td><strong>Engineering</strong></td>
+          <td>GitHub + Cursor</td>
+          <td>Drives maximum iteration speeds throughout code delivery pipelines.</td>
+        </tr>
+        <tr>
+          <td><strong>Growth & Pipeline</strong></td>
+          <td>HubSpot + Calendly</td>
+          <td>Organizes deal visibility and coordinates complex pipeline interactions natively.</td>
+        </tr>
+        <tr>
+          <td><strong>Ops & Compliance</strong></td>
+          <td>Stripe Atlas + Books</td>
+          <td>Ensures clear equity definitions, corporate isolation, and structural transparency.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<footer class="footer">
+  <img src="https://raw.githubusercontent.com/tooltaphq/tooltap-assets/main/logo/primary/Primary_logo-2.png" alt="Tooltap" class="footer-logo">
+  <div class="footer-links">
+    <a href="mailto:founder@tooltap.in">Contact</a>
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+    <a href="#">For companies</a>
+  </div>
+  <p>© 2026 Tooltap. Find any software tool — using AI.</p>
+</footer>
+
+</body>
+</html>
