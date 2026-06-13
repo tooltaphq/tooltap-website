@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Firebase Alternatives in 2026 — Tooltap</title>
+<meta name="description" content="Thinking of switching from Firebase? Tooltap analyzed developer reviews and community discussions to find the best Firebase alternatives — for teams worried about vendor lock-in, pricing, and lack of relational data.">
+<meta property="og:title" content="Best Firebase Alternatives in 2026 — Tooltap">
+<meta property="og:url" content="https://tooltap.in/firebase-alternatives">
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/tooltaphq/tooltap-assets/main/logo/primary/Primary_logo-2.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#fff;color:#1a1a1a;}
+  .nav-wrap{background:#0A1628;}.nav{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;max-width:900px;margin:0 auto;}
+  .nav-logo{height:auto;width:120px;object-fit:contain;filter:brightness(0) invert(1);}
+  .nav-links{display:flex;gap:1.5rem;align-items:center;}.nav-links a{font-size:13px;color:rgba(255,255,255,0.6);text-decoration:none;}.nav-links a:hover{color:#fff;}
+  .nav-cta{background:#378ADD;color:#fff !important;padding:6px 16px;border-radius:6px;}
+  .hero{background:#0A1628;padding:3rem 2rem;text-align:center;}.hero-content{max-width:700px;margin:0 auto;}
+  .hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(55,138,221,0.15);border:0.5px solid rgba(55,138,221,0.3);color:#85B7EB;font-size:12px;padding:4px 12px;border-radius:20px;margin-bottom:1.5rem;}
+  .hero h1{font-size:36px;font-weight:500;color:#fff;line-height:1.2;margin-bottom:1rem;}.hero h1 span{color:#378ADD;}
+  .hero p{font-size:15px;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:1.5rem;max-width:540px;margin-left:auto;margin-right:auto;}
+  .hero-meta{font-size:12px;color:rgba(255,255,255,0.3);}
+  .content{max-width:800px;margin:0 auto;padding:3rem 2rem;}
+  .section-label{font-size:11px;color:#378ADD;text-transform:uppercase;letter-spacing:1px;margin-bottom:0.5rem;}
+  .section-title{font-size:22px;font-weight:500;color:#1a1a1a;margin-bottom:0.5rem;}
+  .section-sub{font-size:14px;color:#666;margin-bottom:1.5rem;line-height:1.6;}
+  .divider{height:0.5px;background:#eee;margin:2.5rem 0;}
+  .reasons{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:3rem;}
+  .reason-card{background:#f8f9fa;border-radius:10px;padding:1rem 1.25rem;border-left:3px solid #378ADD;}
+  .reason-num{font-size:11px;color:#378ADD;font-weight:500;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.5px;}
+  .reason-title{font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:4px;}
+  .reason-desc{font-size:13px;color:#666;line-height:1.5;}
+  .alt-card{border:0.5px solid #eee;border-radius:12px;padding:1.5rem;margin-bottom:1rem;transition:border-color 0.15s;}
+  .alt-card:hover{border-color:#378ADD;}.alt-card.top{border:2px solid #378ADD;background:#FAFCFF;}
+  .alt-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:0.75rem;gap:12px;}
+  .alt-info{flex:1;}.alt-name{font-size:18px;font-weight:500;color:#1a1a1a;margin-bottom:3px;}.alt-tagline{font-size:13px;color:#666;}
+  .alt-badges{display:flex;gap:6px;flex-wrap:wrap;flex-shrink:0;}
+  .badge{font-size:11px;padding:3px 10px;border-radius:20px;}
+  .badge-free{background:#EAF3DE;color:#3B6D11;}.badge-paid{background:#FAEEDA;color:#854F0B;}.badge-top{background:#E6F1FB;color:#0C447C;}.badge-new{background:#EEEDFE;color:#3C3489;}
+  .alt-body{font-size:14px;color:#444;line-height:1.7;margin-bottom:1rem;}
+  .alt-best{background:#f8f9fa;border-radius:8px;padding:10px 14px;margin-bottom:1rem;}
+  .alt-best-label{font-size:11px;color:#378ADD;font-weight:500;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;}
+  .alt-best-text{font-size:13px;color:#444;}
+  .alt-footer{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+  .alt-price{font-size:13px;color:#666;}.alt-price strong{color:#1a1a1a;}
+  .alt-link{font-size:13px;color:#378ADD;text-decoration:none;display:flex;align-items:center;gap:4px;}.alt-link:hover{text-decoration:underline;}
+  .upcoming-wrap{background:linear-gradient(135deg,#0A1628 0%,#0d2040 100%);border-radius:12px;padding:1.5rem;margin-bottom:3rem;}
+  .upcoming-header{display:flex;align-items:center;gap:10px;margin-bottom:0.5rem;}
+  .upcoming-icon{background:rgba(55,138,221,0.2);border:0.5px solid rgba(55,138,221,0.3);border-radius:6px;padding:4px 10px;font-size:11px;color:#85B7EB;font-weight:500;}
+  .upcoming-title{font-size:16px;font-weight:500;color:#fff;}
+  .upcoming-sub{font-size:13px;color:rgba(255,255,255,0.5);margin-bottom:1.25rem;line-height:1.5;}
+  .upcoming-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;}
+  .upcoming-card{background:rgba(255,255,255,0.05);border:0.5px solid rgba(255,255,255,0.1);border-radius:10px;padding:1rem;transition:border-color 0.15s;}
+  .upcoming-card:hover{border-color:rgba(55,138,221,0.5);}
+  .upcoming-card-name{font-size:14px;font-weight:500;color:#fff;margin-bottom:3px;display:flex;align-items:center;gap:8px;}
+  .upcoming-card-tag{font-size:10px;background:rgba(55,138,221,0.2);color:#85B7EB;padding:2px 8px;border-radius:20px;}
+  .upcoming-card-desc{font-size:12px;color:rgba(255,255,255,0.5);line-height:1.5;margin-bottom:8px;}
+  .upcoming-card-link{font-size:12px;color:#378ADD;text-decoration:none;display:flex;align-items:center;gap:4px;}
+  .upcoming-note{font-size:12px;color:rgba(255,255,255,0.3);margin-top:1rem;line-height:1.5;}
+  .table-wrap{overflow-x:auto;margin-bottom:3rem;}
+  table{width:100%;border-collapse:collapse;font-size:13px;}
+  th{background:#0A1628;color:#fff;padding:10px 14px;text-align:left;font-weight:500;}
+  td{padding:10px 14px;border-bottom:0.5px solid #eee;color:#444;}
+  tr:hover td{background:#f8f9fa;}
+  .reddit-wrap{background:#f8f9fa;border-radius:12px;padding:1.5rem;margin-bottom:3rem;}
+  .reddit-header{display:flex;align-items:center;gap:10px;margin-bottom:0.5rem;}
+  .reddit-icon{width:28px;height:28px;background:#FF4500;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:700;flex-shrink:0;}
+  .reddit-title{font-size:16px;font-weight:500;color:#1a1a1a;}
+  .reddit-sub{font-size:13px;color:#666;margin-bottom:1.25rem;line-height:1.5;}
+  .reddit-links{display:flex;flex-direction:column;gap:8px;}
+  .reddit-link-item{display:flex;align-items:flex-start;gap:10px;padding:10px 14px;background:#fff;border-radius:8px;border:0.5px solid #eee;text-decoration:none;transition:border-color 0.15s;}
+  .reddit-link-item:hover{border-color:#FF4500;}
+  .reddit-link-info{flex:1;}.reddit-link-title{font-size:13px;font-weight:500;color:#1a1a1a;margin-bottom:2px;}.reddit-link-meta{font-size:12px;color:#999;}
+  .reddit-link-arrow{font-size:14px;color:#999;margin-top:2px;flex-shrink:0;}
+  .reddit-disclaimer{font-size:12px;color:#999;margin-top:1rem;line-height:1.5;}
+  .cta-wrap{background:#0A1628;border-radius:12px;padding:2rem;text-align:center;margin-bottom:3rem;}
+  .cta-wrap h3{font-size:20px;font-weight:500;color:#fff;margin-bottom:0.5rem;}
+  .cta-wrap p{font-size:14px;color:rgba(255,255,255,0.6);margin-bottom:1.5rem;}
+  .cta-form{display:flex;gap:8px;max-width:400px;margin:0 auto;}
+  .cta-form input{flex:1;padding:0 14px;height:40px;border-radius:8px;border:none;background:rgba(255,255,255,0.1);color:#fff;font-size:14px;font-family:inherit;}
+  .cta-form input::placeholder{color:rgba(255,255,255,0.4);}
+  .cta-form button{height:40px;padding:0 18px;border-radius:8px;background:#378ADD;color:#fff;border:none;font-size:13px;cursor:pointer;font-family:inherit;}
+  .more-links{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:2rem;}
+  .more-link{padding:8px 16px;border:0.5px solid #ddd;border-radius:20px;font-size:13px;color:#444;text-decoration:none;}
+  .more-link:hover{border-color:#378ADD;color:#378ADD;}
+  .footer{background:#0A1628;padding:2rem;text-align:center;}
+  .footer-logo{height:auto;width:120px;object-fit:contain;filter:brightness(0) invert(1);margin-bottom:0.75rem;}
+  .footer p{font-size:12px;color:rgba(255,255,255,0.35);}
+  .footer-links{display:flex;gap:1.5rem;justify-content:center;margin:0.5rem 0 0.75rem;flex-wrap:wrap;}
+  .footer-links a{font-size:12px;color:rgba(255,255,255,0.4);text-decoration:none;}
+  .footer-links a:hover{color:rgba(255,255,255,0.7);}
+  @media(max-width:600px){.hero h1{font-size:26px;}.alt-header{flex-direction:column;}.cta-form{flex-direction:column;}.cta-form button{width:100%;}.nav-links{display:none;}}
+</style>
+</head>
+<body>
+<iframe id="hiddenFrame" name="hiddenFrame" style="display:none;width:0;height:0;border:none;"></iframe>
+<div class="nav-wrap"><nav class="nav">
+  <img src="https://raw.githubusercontent.com/tooltaphq/tooltap-assets/main/logo/primary/Primary_logo-2.png" alt="Tooltap" class="nav-logo">
+  <div class="nav-links"><a href="/">Home</a><a href="/#poll">Give feedback</a><a href="mailto:founder@tooltap.in">Contact</a><a href="/#searchQuery" class="nav-cta">Find my alternative</a></div>
+</nav></div>
+
+<div class="hero"><div class="hero-content">
+  <div class="hero-badge"><i class="ti ti-sparkles"></i> AI-analyzed from developer community discussions & technical reviews</div>
+  <h1>Best Firebase Alternatives<br><span>in 2026</span></h1>
+  <p>Worried about vendor lock-in, surprise bills, or Firestore's NoSQL limitations? We analyzed thousands of developer discussions to find the best alternatives — from open-source self-hosted options to managed Postgres-based platforms.</p>
+  <div class="hero-meta">Last updated: June 2026 · 6 established + 3 upcoming alternatives · Sources: Reddit, Hacker News, dev blogs</div>
+</div></div>
+
+<div class="content">
+  <div class="section-label">The real reasons</div>
+  <div class="section-title">Why developers leave Firebase</div>
+  <div class="section-sub">Based on analysis of developer community discussions across Reddit, Hacker News, and technical blogs — these are the most cited switching triggers.</div>
+  <div class="reasons">
+    <div class="reason-card"><div class="reason-num">Reason #1</div><div class="reason-title">Vendor lock-in to Google</div><div class="reason-desc">Firebase runs entirely on Google Cloud infrastructure you don't control. Migrating away means rewriting your data layer, not just changing a connection string — Firestore's data model and query language are proprietary.</div></div>
+    <div class="reason-card"><div class="reason-num">Reason #2</div><div class="reason-title">Surprise bills at scale</div><div class="reason-desc">Pricing is usage-based across reads, writes, storage, and function invocations, which can produce surprising bills under load — a common complaint as apps grow.</div></div>
+    <div class="reason-card"><div class="reason-num">Reason #3</div><div class="reason-title">No relational data / complex queries</div><div class="reason-desc">Firestore's NoSQL document model makes joins, complex filtering, and relational queries difficult. Teams with relational data needs hit walls that SQL databases don't have.</div></div>
+    <div class="reason-card"><div class="reason-num">Reason #4</div><div class="reason-title">No self-hosting option</div><div class="reason-desc">Firebase is Google's proprietary BaaS, fully managed by Google, with no self-hosting option — teams with data residency or compliance needs have no path forward.</div></div>
+    <div class="reason-card"><div class="reason-num">Reason #5</div><div class="reason-title">Open-source alternatives matured</div><div class="reason-desc">Supabase has become a favorite tool for developers, offering an open source alternative to Firebase built on PostgreSQL, with over 1.7 million developers using the platform.</div></div>
+  </div>
+
+  <div class="divider"></div>
+  <div class="section-label">Established alternatives</div>
+  <div class="section-title">6 proven tools developers switch to</div>
+  <div class="section-sub">Ranked by switching frequency — not paid placement.</div>
+
+  <div class="alt-card top">
+    <div class="alt-header"><div class="alt-info"><div class="alt-name">Supabase</div><div class="alt-tagline">Open-source Firebase alternative built on PostgreSQL</div></div>
+    <div class="alt-badges"><span class="badge badge-top">Most switched to</span><span class="badge badge-free">Free plan</span></div></div>
+    <div class="alt-body">Supabase is the most popular open-source Firebase replacement — with over 1.7 million developers using the platform. Built on real PostgreSQL, giving you full SQL, relational data, joins, and Row Level Security for multi-tenant apps. Available as managed cloud or fully self-hosted. The generated TypeScript types from your schema are regularly praised as one of the best developer experiences in the space.</div>
+    <div class="alt-best"><div class="alt-best-label">Best for</div><div class="alt-best-text">Teams that need real PostgreSQL power — complex relational queries, Row Level Security for multi-tenant SaaS, and pgvector for AI — with a well-documented SQL path.</div></div>
+    <div class="alt-footer"><div class="alt-price">Free plan · Pro from <strong>$25/month</strong></div><a href="https://supabase.com" target="_blank" class="alt-link">Visit Supabase <i class="ti ti-arrow-right"></i></a></div>
+  </div>
+
+  <div class="alt-card">
+    <div class="alt-header"><div class="alt-info"><div class="alt-name">Appwrite</div><div class="alt-tagline">Open-source, self-hostable Firebase-parity backend</div></div>
+    <div class="alt-badges"><span class="badge badge-free">Free self-hosted</span><span class="badge badge-new">Open source</span></div></div>
+    <div class="alt-body">Appwrite is an open-source Backend-as-a-Service platform providing Auth, Databases, Storage, Functions, Messaging, Realtime, and web hosting, available as a managed cloud service or self-hosted via Docker. More batteries-included than PocketBase, it mirrors Firebase's feature set closely while giving you full infrastructure control.</div>
+    <div class="alt-best"><div class="alt-best-label">Best for</div><div class="alt-best-text">Teams wanting an open-source BaaS with strong self-hosting control — no usage limits when self-hosted, with a modern admin UI.</div></div>
+    <div class="alt-footer"><div class="alt-price">Free self-hosted · Cloud from <strong>$15/month</strong></div><a href="https://appwrite.io" target="_blank" class="alt-link">Visit Appwrite <i class="ti ti-arrow-right"></i></a></div>
+  </div>
+
+  <div class="alt-card">
+    <div class="alt-header"><div class="alt-info"><div class="alt-name">PocketBase</div><div class="alt-tagline">Single-executable backend — the lightest possible alternative</div></div>
+    <div class="alt-badges"><span class="badge badge-free">Free forever</span><span class="badge badge-new">Open source</span></div></div>
+    <div class="alt-body">PocketBase is a lightweight, open-source backend delivered as a single executable file with SQLite, auth, file storage, and realtime. PocketBase is a single executable you can scp to a server and run — about as simple as backend deployment gets.</div>
+    <div class="alt-best"><div class="alt-best-label">Best for</div><div class="alt-best-text">If you want the lightest possible backend for side projects or prototypes — solo projects and prototypes that fit on a single server.</div></div>
+    <div class="alt-footer"><div class="alt-price">Completely free · Self-hosted</div><a href="https://pocketbase.io" target="_blank" class="alt-link">Visit PocketBase <i class="ti ti-arrow-right"></i></a></div>
+  </div>
+
+  <div class="alt-card">
+    <div class="alt-header"><div class="alt-info"><div class="alt-name">AWS Amplify</div><div class="alt-tagline">Enterprise-grade scalability within the AWS ecosystem</div></div>
+    <div class="alt-badges"><span class="badge badge-paid">Paid</span></div></div>
+    <div class="alt-body">For flexible schemas and NoSQL, AWS Amplify also supports NoSQL options like DynamoDB, plus Amplify DataStore provides offline synchronization. For enterprise-grade scalability, especially within a specific cloud ecosystem, AWS Amplify is designed for this.</div>
+    <div class="alt-best"><div class="alt-best-label">Best for</div><div class="alt-best-text">Teams already on AWS who want Firebase-like developer experience with enterprise scalability and deep AWS service integration.</div></div>
+    <div class="alt-footer"><div class="alt-price">Pay-as-you-go · Free tier available</div><a href="https://aws.amazon.com/amplify" target="_blank" class="alt-link">Visit AWS Amplify <i class="ti ti-arrow-right"></i></a></div>
+  </div>
+
+  <div class="alt-card">
+    <div class="alt-header"><div class="alt-info"><div class="alt-name">Nhost</div><div class="alt-tagline">Postgres + GraphQL-first Firebase alternative</div></div>
+    <div class="alt-badges"><span class="badge badge-free">Free plan</span></div></div>
+    <div class="alt-body">Choose Nhost if you want Postgres plus a more GraphQL-first workflow — if GraphQL is a central requirement, Hasura and NHost (which uses Hasura) are excellent choices. Combines a managed Postgres database with auto-generated GraphQL APIs.</div>
+    <div class="alt-best"><div class="alt-best-label">Best for</div><div class="alt-best-text">Teams that want Postgres reliability with GraphQL APIs generated automatically — ideal for frontend teams building data-heavy apps.</div></div>
+    <div class="alt-footer"><div class="alt-price">Free plan · Pro from <strong>$25/month</strong></div><a href="https://nhost.io" target="_blank" class="alt-link">Visit Nhost <i class="ti ti-arrow-right"></i></a></div>
+  </div>
+
+  <div class="alt-card">
+    <div class="alt-header"><div class="alt-info"><div class="alt-name">Back4App</div><div class="alt-tagline">Open-source Parse backend — visual data browser, easy migration</div></div>
+    <div class="alt-badges"><span class="badge badge-free">Free plan</span></div></div>
+    <div class="alt-body">Back4App is built on the open-source Parse Platform — offering a database, authentication, cloud functions, and push notifications with a visual dashboard similar to Firebase's console. A popular choice for teams wanting a managed BaaS experience without Google's ecosystem lock-in, with straightforward migration paths from Parse-compatible apps.</div>
+    <div class="alt-best"><div class="alt-best-label">Best for</div><div class="alt-best-text">Teams wanting a Firebase-console-like experience with visual data management, but built on open-source Parse with no Google dependency.</div></div>
+    <div class="alt-footer"><div class="alt-price">Free plan · Paid from <strong>$25/month</strong></div><a href="https://back4app.com" target="_blank" class="alt-link">Visit Back4App <i class="ti ti-arrow-right"></i></a></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="upcoming-wrap">
+    <div class="upcoming-header"><div class="upcoming-icon">🚀 New & Upcoming</div><div class="upcoming-title">Emerging Firebase alternatives to watch in 2026</div></div>
+    <div class="upcoming-sub">These tools are gaining traction — reactive, AI-native, and infrastructure-owned approaches to backend development.</div>
+    <div class="upcoming-grid">
+      <div class="upcoming-card"><div class="upcoming-card-name">Convex <span class="upcoming-card-tag">Reactive ⚡</span></div><div class="upcoming-card-desc">Convex trades SQL for reactivity — a TypeScript-native reactive database where your backend functions automatically update connected clients. Growing fast among React and Next.js developers wanting real-time by default.</div><a href="https://convex.dev" target="_blank" class="upcoming-card-link">Visit Convex <i class="ti ti-arrow-right"></i></a></div>
+      <div class="upcoming-card"><div class="upcoming-card-name">Encore <span class="upcoming-card-tag">Infra-owned</span></div><div class="upcoming-card-desc">Encore is the only option that gives you a complete backend with infrastructure you own — your backend deploys to standard AWS or GCP services in your own account, with no runtime dependency on Encore's servers.</div><a href="https://encore.dev" target="_blank" class="upcoming-card-link">Visit Encore <i class="ti ti-arrow-right"></i></a></div>
+      <div class="upcoming-card"><div class="upcoming-card-name">Neon <span class="upcoming-card-tag">Serverless Postgres</span></div><div class="upcoming-card-desc">Neon gives you better Postgres without the BaaS bundle — Neon's branching and scale-to-zero make it a strong choice for the database layer if you're assembling your own backend stack.</div><a href="https://neon.tech" target="_blank" class="upcoming-card-link">Visit Neon <i class="ti ti-arrow-right"></i></a></div>
+    </div>
+    <div class="upcoming-note">💡 Tooltap tracks emerging tools as they launch — bookmark for updates on new backend alternatives.</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-label">Side by side</div>
+  <div class="section-title">Quick comparison</div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Tool</th><th>Database</th><th>Self-hosted</th><th>Free tier</th><th>Best for</th><th>Paid from</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Firebase</strong></td><td>NoSQL</td><td>❌</td><td>✅</td><td>Mobile-first, Google ecosystem</td><td>Pay-as-you-go</td></tr>
+        <tr><td><strong>Supabase</strong></td><td>PostgreSQL</td><td>✅</td><td>✅</td><td>Relational data, multi-tenant SaaS</td><td>$25/mo</td></tr>
+        <tr><td><strong>Appwrite</strong></td><td>Document (MariaDB)</td><td>✅</td><td>✅</td><td>Firebase-parity, self-hosted</td><td>$15/mo</td></tr>
+        <tr><td><strong>PocketBase</strong></td><td>SQLite</td><td>✅</td><td>✅ Free</td><td>Solo devs, prototypes</td><td>Free</td></tr>
+        <tr><td><strong>AWS Amplify</strong></td><td>NoSQL (DynamoDB)</td><td>❌</td><td>✅</td><td>AWS-native enterprises</td><td>Pay-as-you-go</td></tr>
+        <tr><td><strong>Nhost</strong></td><td>PostgreSQL + GraphQL</td><td>〰️</td><td>✅</td><td>GraphQL-first teams</td><td>$25/mo</td></tr>
+        <tr><td><strong>Back4App</strong></td><td>MongoDB (Parse)</td><td>〰️</td><td>✅</td><td>Visual data management</td><td>$25/mo</td></tr>
+        <tr style="background:#FFF8E1;"><td><strong>Convex 🆕</strong></td><td>Reactive document</td><td>❌</td><td>✅</td><td>React/Next.js real-time</td><td>Free tier</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-label">Our recommendation</div>
+  <div class="section-title">Which Firebase alternative should you pick?</div>
+  <div class="reasons" style="margin-bottom:2rem;">
+    <div class="reason-card"><div class="reason-num">Need relational data</div><div class="reason-title">→ Supabase</div><div class="reason-desc">Real PostgreSQL, joins, Row Level Security. The most direct upgrade path from Firestore's limitations.</div></div>
+    <div class="reason-card"><div class="reason-num">Want full self-hosting</div><div class="reason-title">→ Appwrite</div><div class="reason-desc">Firebase-parity feature set, completely self-hostable, no usage limits on your own infra.</div></div>
+    <div class="reason-card"><div class="reason-num">Solo dev / prototype</div><div class="reason-title">→ PocketBase</div><div class="reason-desc">Single executable, SQLite, zero infrastructure complexity. Up and running in minutes.</div></div>
+    <div class="reason-card"><div class="reason-num">Already on AWS</div><div class="reason-title">→ AWS Amplify</div><div class="reason-desc">Enterprise scale, deep AWS integration, similar offline-sync capabilities to Firebase.</div></div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-label">Community sources</div>
+  <div class="section-title">What developer communities are saying</div>
+  <div class="reddit-wrap">
+    <div class="reddit-header"><div class="reddit-icon">r/</div><div class="reddit-title">Active discussions on Firebase switching</div></div>
+    <div class="reddit-sub">These are the communities where developers discuss Firebase frustrations and what they switched to.</div>
+    <div class="reddit-links">
+      <a href="https://www.reddit.com/r/Firebase/search/?q=alternatives" target="_blank" class="reddit-link-item"><div class="reddit-link-info"><div class="reddit-link-title">r/Firebase — Official Firebase community</div><div class="reddit-link-meta">Search "alternatives" or "Supabase" · 50k+ members</div></div><i class="ti ti-arrow-up-right reddit-link-arrow"></i></a>
+      <a href="https://www.reddit.com/r/Supabase/" target="_blank" class="reddit-link-item"><div class="reddit-link-info"><div class="reddit-link-title">r/Supabase — Migration stories from Firebase</div><div class="reddit-link-meta">Developers sharing Firebase to Supabase migration experiences · 30k+ members</div></div><i class="ti ti-arrow-up-right reddit-link-arrow"></i></a>
+      <a href="https://www.reddit.com/r/webdev/search/?q=firebase+alternative" target="_blank" class="reddit-link-item"><div class="reddit-link-info"><div class="reddit-link-title">r/webdev — General backend tooling discussions</div><div class="reddit-link-meta">Web developers comparing BaaS platforms · 2M+ members</div></div><i class="ti ti-arrow-up-right reddit-link-arrow"></i></a>
+      <a href="https://news.ycombinator.com/search?q=firebase+alternative" target="_blank" class="reddit-link-item"><div class="reddit-link-info"><div class="reddit-link-title">Hacker News — Technical deep-dives on BaaS choices</div><div class="reddit-link-meta">Founders and engineers discussing backend architecture decisions</div></div><i class="ti ti-arrow-up-right reddit-link-arrow"></i></a>
+    </div>
+    <div class="reddit-disclaimer">💡 Tooltap aggregates insights from these communities using AI — recommendations are based on real switching patterns, not paid placements.</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="cta-wrap">
+    <h3>Not sure which backend fits your project?</h3>
+    <p>Describe your exact Firebase frustration — Tooltap's AI recommends the right alternative instantly.</p>
+    <form id="ctaForm" action="https://docs.google.com/forms/d/e/1FAIpQLSf8twlrE7wHAsSNQ-GUkyH-4pBYlFMFtQ4EK602q3M4XEXEiQ/formResponse" method="POST" target="hiddenFrame" onsubmit="handleCTA(event)">
+      <div class="cta-form"><input type="email" name="entry.1696180610" id="ctaEmail" placeholder="Your work email..." required /><button type="submit">Get recommendations</button></div>
+    </form>
+    <div id="ctaSuccess" style="display:none;color:#5DCAA5;font-size:13px;margin-top:0.75rem;">✅ Done! We'll send you personalised recommendations.</div>
+    <p style="font-size:11px;color:rgba(255,255,255,0.25);margin-top:0.75rem;">No spam. Unsubscribe anytime.</p>
+  </div>
+
+  <div class="section-label">Explore more</div>
+  <div class="section-title">Looking for other alternatives?</div>
+  <div class="more-links">
+    <a href="/pagerduty-alternatives" class="more-link">PagerDuty alternatives →</a>
+    <a href="/chatgpt-alternatives" class="more-link">ChatGPT alternatives →</a>
+    <a href="/zapier-alternatives" class="more-link">Zapier alternatives →</a>
+    <a href="/jira-alternatives" class="more-link">Jira alternatives →</a>
+  </div>
+</div>
+
+<footer class="footer">
+  <img src="https://raw.githubusercontent.com/tooltaphq/tooltap-assets/main/logo/primary/Primary_logo-2.png" alt="Tooltap" class="footer-logo">
+  <div class="footer-links"><a href="/">Home</a><a href="mailto:founder@tooltap.in">Contact</a><a href="#">Privacy</a><a href="#">Terms</a></div>
+  <p>© 2026 Tooltap. Find any software tool — using AI.</p>
+</footer>
+<script>function handleCTA(e){const email=document.getElementById('ctaEmail').value.trim();if(!email||!email.includes('@')){document.getElementById('ctaEmail').style.borderColor='rgba(226,75,74,0.6)';e.preventDefault();return;}setTimeout(()=>{document.getElementById('ctaForm').style.display='none';document.getElementById('ctaSuccess').style.display='block';},500);}</script>
+</body>
+</html>
