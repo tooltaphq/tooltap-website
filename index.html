@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tooltap. — Find the right tool, using AI.</title>
-<meta name="description" content="Thinking of switching software? Describe what you need — Tooltap's AI instantly finds the best alternative for your exact use case.">
+<meta name="description" content="Thinking of switching software? Tooltap uses AI to find the best alternative for your exact use case — instantly.">
 <meta property="og:title" content="Tooltap. — Your search ends here.">
 <meta property="og:description" content="AI-powered software switching intelligence. Find the right tool instantly.">
 <meta property="og:url" content="https://tooltap.in">
@@ -14,63 +14,60 @@
   *{box-sizing:border-box;margin:0;padding:0;}
   body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#fff;color:#1a1a1a;}
 
-  .hero{background:#0A1628;padding:3rem 2rem;text-align:center;}
+  .hero{background:#0A1628;padding:3rem 2rem 2.5rem;}
   .nav{display:flex;align-items:center;justify-content:space-between;max-width:900px;margin:0 auto 3rem;}
-  .nav-logo{height:auto;width:180px;object-fit:contain;filter:brightness(0) invert(1);}
-  .nav-links{display:flex;gap:1.5rem;}
+  .nav-logo{height:auto;width:160px;object-fit:contain;filter:brightness(0) invert(1);}
+  .nav-links{display:flex;gap:1.5rem;align-items:center;}
   .nav-links a{color:rgba(255,255,255,0.6);text-decoration:none;font-size:14px;}
   .nav-links a:hover{color:#fff;}
+  .nav-cta{background:#378ADD;color:#fff !important;padding:6px 16px;border-radius:6px;font-size:13px;}
 
-  .hero-content{max-width:640px;margin:0 auto;}
+  .hero-content{max-width:580px;margin:0 auto;text-align:center;}
   .hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(55,138,221,0.15);border:0.5px solid rgba(55,138,221,0.3);color:#85B7EB;font-size:12px;padding:4px 12px;border-radius:20px;margin-bottom:1.5rem;}
-  .hero h1{font-size:42px;font-weight:500;color:#fff;line-height:1.2;margin-bottom:1rem;}
+  .hero h1{font-size:40px;font-weight:500;color:#fff;line-height:1.2;margin-bottom:1rem;}
   .hero h1 span{color:#378ADD;}
-  .hero p{font-size:16px;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:2rem;max-width:480px;margin-left:auto;margin-right:auto;}
+  .hero p{font-size:15px;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:2rem;max-width:440px;margin-left:auto;margin-right:auto;}
 
-  /* AI SEARCH BOX */
-  .search-wrap{max-width:560px;margin:0 auto 1rem;}
-  .search-box{width:100%;padding:14px 18px;border-radius:10px;border:0.5px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:#fff;font-size:15px;font-family:inherit;resize:none;height:90px;line-height:1.5;}
-  .search-box::placeholder{color:rgba(255,255,255,0.35);}
-  .search-box:focus{outline:none;border-color:rgba(55,138,221,0.6);}
-  .search-row{display:flex;gap:8px;margin-top:8px;}
-  .search-email{flex:1;padding:0 14px;height:44px;border-radius:8px;border:0.5px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:#fff;font-size:14px;font-family:inherit;}
-  .search-email::placeholder{color:rgba(255,255,255,0.35);}
-  .search-email:focus{outline:none;border-color:rgba(55,138,221,0.6);}
-  .search-btn{height:44px;padding:0 22px;border-radius:8px;background:#378ADD;color:#fff;border:none;font-size:14px;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:6px;white-space:nowrap;}
-  .search-btn:hover{background:#185FA5;}
-  .search-btn:disabled{opacity:0.6;cursor:not-allowed;}
-  .hero-sub{font-size:12px;color:rgba(255,255,255,0.3);margin-bottom:2.5rem;}
-  .success-banner{background:rgba(29,158,117,0.15);border:0.5px solid rgba(29,158,117,0.3);border-radius:8px;padding:10px 16px;font-size:13px;color:#5DCAA5;max-width:560px;margin:0 auto 1.5rem;display:none;text-align:center;}
+  /* WAITLIST */
+  .waitlist-wrap{max-width:480px;margin:0 auto 0.75rem;}
+  .waitlist-row{display:flex;gap:8px;}
+  .waitlist-email{flex:1;padding:0 16px;height:46px;border-radius:8px;border:0.5px solid rgba(255,255,255,0.15);background:rgba(255,255,255,0.08);color:#fff;font-size:14px;font-family:inherit;}
+  .waitlist-email::placeholder{color:rgba(255,255,255,0.4);}
+  .waitlist-email:focus{outline:none;border-color:rgba(55,138,221,0.6);}
+  .waitlist-btn{height:46px;padding:0 22px;border-radius:8px;background:#378ADD;color:#fff;border:none;font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;white-space:nowrap;}
+  .waitlist-btn:hover{background:#185FA5;}
+  .waitlist-sub{font-size:12px;color:rgba(255,255,255,0.3);margin-top:8px;text-align:center;}
+  .waitlist-success{background:rgba(29,158,117,0.15);border:0.5px solid rgba(29,158,117,0.3);border-radius:8px;padding:12px 16px;font-size:14px;color:#5DCAA5;max-width:480px;margin:0 auto 0.75rem;text-align:center;display:none;}
 
-  /* AI RESULTS */
-  .ai-results{max-width:560px;margin:0 auto 2rem;display:none;}
-  .ai-results-label{font-size:12px;color:rgba(255,255,255,0.4);margin-bottom:0.75rem;text-align:left;}
-  .ai-result-card{background:rgba(255,255,255,0.06);border:0.5px solid rgba(255,255,255,0.12);border-radius:10px;padding:1rem;margin-bottom:8px;text-align:left;}
-  .ai-result-card.top{border-color:rgba(55,138,221,0.5);background:rgba(55,138,221,0.08);}
-  .ai-result-name{font-size:15px;font-weight:500;color:#fff;margin-bottom:3px;display:flex;align-items:center;gap:8px;}
-  .ai-result-badge{font-size:10px;background:rgba(55,138,221,0.3);color:#85B7EB;padding:2px 8px;border-radius:20px;}
-  .ai-result-why{font-size:13px;color:rgba(255,255,255,0.6);line-height:1.5;margin-bottom:8px;}
-  .ai-result-link{font-size:12px;color:#378ADD;text-decoration:none;display:inline-flex;align-items:center;gap:4px;}
-  .ai-thinking{text-align:center;padding:1.5rem;color:rgba(255,255,255,0.5);font-size:14px;display:none;}
-
-  .hero-stats{display:flex;gap:2rem;justify-content:center;padding-top:2rem;border-top:0.5px solid rgba(255,255,255,0.08);}
+  .hero-stats{display:flex;gap:2rem;justify-content:center;padding-top:2rem;margin-top:2rem;border-top:0.5px solid rgba(255,255,255,0.08);}
   .stat{text-align:center;}
   .stat-num{font-size:22px;font-weight:500;color:#fff;}
   .stat-label{font-size:12px;color:rgba(255,255,255,0.4);margin-top:2px;}
 
-  /* BROWSE ALTERNATIVES */
+  /* BROWSE */
   .browse{padding:2.5rem 2rem;max-width:900px;margin:0 auto;}
   .section-label{font-size:11px;color:#378ADD;text-transform:uppercase;letter-spacing:1px;margin-bottom:0.5rem;}
   .section-title{font-size:22px;font-weight:500;color:#1a1a1a;margin-bottom:0.5rem;}
   .section-sub{font-size:14px;color:#666;margin-bottom:1.5rem;line-height:1.6;}
 
-  .alt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:2.5rem;}
+  .alt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px;margin-bottom:2.5rem;}
   .alt-pill{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border:0.5px solid #eee;border-radius:10px;text-decoration:none;transition:all 0.15s;background:#fff;}
   .alt-pill:hover{border-color:#378ADD;background:#FAFCFF;}
+  .alt-pill-left{flex:1;}
   .alt-pill-name{font-size:14px;font-weight:500;color:#1a1a1a;}
   .alt-pill-sub{font-size:12px;color:#999;margin-top:2px;}
-  .alt-pill-arrow{font-size:16px;color:#ccc;}
+  .alt-pill-arrow{font-size:16px;color:#ccc;flex-shrink:0;margin-left:8px;}
   .alt-pill:hover .alt-pill-arrow{color:#378ADD;}
+
+  /* FEATURED CARD — Founder's Guide */
+  .featured-card{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:1.5px solid #378ADD;border-radius:12px;text-decoration:none;background:linear-gradient(135deg,#FAFCFF,#EEF6FF);margin-bottom:2.5rem;transition:all 0.15s;}
+  .featured-card:hover{background:linear-gradient(135deg,#EEF6FF,#DCF0FF);border-color:#185FA5;}
+  .featured-card-icon{font-size:28px;flex-shrink:0;}
+  .featured-card-info{flex:1;}
+  .featured-card-label{font-size:11px;color:#378ADD;text-transform:uppercase;letter-spacing:1px;font-weight:500;margin-bottom:3px;}
+  .featured-card-title{font-size:15px;font-weight:500;color:#1a1a1a;margin-bottom:3px;}
+  .featured-card-desc{font-size:13px;color:#666;}
+  .featured-card-arrow{font-size:20px;color:#378ADD;flex-shrink:0;}
 
   /* HOW IT WORKS */
   .how{padding:2.5rem 2rem;background:#f8f9fa;}
@@ -81,7 +78,7 @@
   .step-title{font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:4px;}
   .step-desc{font-size:13px;color:#666;line-height:1.5;}
 
-  /* SURVEY */
+  /* SURVEY — minimal */
   .survey{padding:2.5rem 2rem;max-width:900px;margin:0 auto;}
   .poll-wrap{background:#f8f9fa;border-radius:12px;padding:1.5rem;}
   .poll-title{font-size:16px;font-weight:500;color:#1a1a1a;margin-bottom:0.25rem;}
@@ -89,22 +86,21 @@
   .poll-q{margin-bottom:1.25rem;}
   .poll-q-label{font-size:13px;font-weight:500;color:#1a1a1a;margin-bottom:8px;}
   .poll-options{display:flex;flex-wrap:wrap;gap:8px;}
-  .poll-opt{padding:6px 14px;border-radius:20px;font-size:13px;border:0.5px solid #ddd;background:#fff;color:#666;cursor:pointer;transition:all 0.15s;}
+  .poll-opt{padding:6px 14px;border-radius:20px;font-size:13px;border:0.5px solid #ddd;background:#fff;color:#666;cursor:pointer;transition:all 0.15s;user-select:none;}
   .poll-opt:hover{border-color:#378ADD;color:#378ADD;}
   .poll-opt.selected{background:#E6F1FB;color:#0C447C;border-color:#85B7EB;}
-  .poll-input{width:100%;padding:10px 14px;border-radius:8px;border:0.5px solid #ddd;background:#fff;color:#1a1a1a;font-size:14px;font-family:inherit;margin-top:0.5rem;}
-  .poll-input:focus{outline:none;border-color:#378ADD;}
-  .poll-btn{width:100%;padding:10px 0;border-radius:8px;background:#378ADD;color:#fff;border:none;font-size:14px;cursor:pointer;margin-top:1rem;font-family:inherit;display:flex;align-items:center;justify-content:center;gap:6px;}
+  .poll-email{width:100%;padding:10px 14px;border-radius:8px;border:0.5px solid #ddd;background:#fff;color:#1a1a1a;font-size:14px;font-family:inherit;margin-top:4px;}
+  .poll-email:focus{outline:none;border-color:#378ADD;}
+  .poll-btn{width:100%;padding:11px 0;border-radius:8px;background:#378ADD;color:#fff;border:none;font-size:14px;font-weight:500;cursor:pointer;margin-top:1rem;font-family:inherit;}
   .poll-btn:hover{background:#185FA5;}
   .poll-btn:disabled{opacity:0.6;cursor:not-allowed;}
-  .required{color:#E24B4A;margin-left:2px;}
   .poll-success{text-align:center;padding:1.5rem;display:none;}
-  .poll-success i{font-size:36px;color:#1D9E75;display:block;margin-bottom:0.75rem;}
-  .poll-success h3{font-size:16px;font-weight:500;color:#1a1a1a;margin-bottom:0.5rem;}
-  .poll-success p{font-size:14px;color:#666;}
+  .poll-success-icon{font-size:32px;color:#1D9E75;display:block;margin-bottom:0.5rem;}
+  .poll-success h3{font-size:15px;font-weight:500;color:#1a1a1a;margin-bottom:4px;}
+  .poll-success p{font-size:13px;color:#666;}
 
   .footer{background:#0A1628;padding:2rem;text-align:center;}
-  .footer-logo{height:auto;width:180px;object-fit:contain;filter:brightness(0) invert(1);margin-bottom:0.75rem;}
+  .footer-logo{height:auto;width:160px;object-fit:contain;filter:brightness(0) invert(1);margin-bottom:0.75rem;}
   .footer p{font-size:13px;color:rgba(255,255,255,0.35);}
   .footer-links{display:flex;gap:1.5rem;justify-content:center;margin:0.75rem 0 1rem;flex-wrap:wrap;}
   .footer-links a{font-size:13px;color:rgba(255,255,255,0.4);text-decoration:none;}
@@ -112,17 +108,25 @@
 
   @media(max-width:600px){
     .hero h1{font-size:28px;}
-    .search-row{flex-direction:column;}
-    .search-btn{width:100%;justify-content:center;}
+    .waitlist-row{flex-direction:column;}
+    .waitlist-btn{width:100%;}
     .hero-stats{gap:1rem;}
     .nav-links{display:none;}
-    .nav-logo{width:140px;}
+    .nav-logo{width:130px;}
+    .featured-card{flex-wrap:wrap;}
   }
 </style>
 </head>
 <body>
 
 <iframe id="hiddenFrame" name="hiddenFrame" style="display:none;width:0;height:0;border:none;"></iframe>
+
+<!-- Hidden waitlist form -->
+<form id="waitlistForm"
+  action="https://docs.google.com/forms/d/e/1FAIpQLSf8twlrE7wHAsSNQ-GUkyH-4pBYlFMFtQ4EK602q3M4XEXEiQ/formResponse"
+  method="POST" target="hiddenFrame" style="display:none;">
+  <input type="email" name="entry.1696180610" id="w_email" />
+</form>
 
 <!-- Hidden poll form -->
 <form id="pollForm"
@@ -138,20 +142,14 @@
   <input type="text" name="entry.1158386314" id="f_linkedin" />
 </form>
 
-<!-- Hidden waitlist form -->
-<form id="waitlistForm"
-  action="https://docs.google.com/forms/d/e/1FAIpQLSf8twlrE7wHAsSNQ-GUkyH-4pBYlFMFtQ4EK602q3M4XEXEiQ/formResponse"
-  method="POST" target="hiddenFrame" style="display:none;">
-  <input type="email" name="entry.1696180610" id="w_email" />
-  <input type="text" name="entry.1696180610" id="w_query" />
-</form>
-
+<!-- HERO -->
 <div class="hero">
   <nav class="nav">
     <img src="https://raw.githubusercontent.com/tooltaphq/tooltap-assets/main/logo/primary/Primary_logo-2.png" alt="Tooltap" class="nav-logo">
     <div class="nav-links">
-      <a href="#alternatives">Alternatives</a>
-      <a href="#poll">Give feedback</a>
+      <a href="#alternatives">Browse</a>
+      <a href="/founders-guide.html">Founder's Guide</a>
+      <a href="#poll">Feedback</a>
       <a href="mailto:founder@tooltap.in">Contact</a>
     </div>
   </nav>
@@ -159,31 +157,23 @@
   <div class="hero-content">
     <div class="hero-badge"><i class="ti ti-sparkles"></i> AI-powered software discovery — now in beta</div>
     <h1>Find the right tool.<br><span>Using AI.</span></h1>
-    <p>Thinking of switching software? Describe what you need or what's frustrating you — Tooltap's AI instantly finds the best alternative for your exact use case.</p>
+    <p>Thinking of switching software? Join the waitlist — we'll send you the best alternatives for your use case.</p>
 
-    <div class="search-wrap">
-      <textarea class="search-box" id="searchQuery" placeholder="e.g. I'm looking to replace Notion — it's too slow for my team and we need something with better project management built in..."></textarea>
-      <div class="search-row">
-        <input type="email" class="search-email" id="searchEmail" placeholder="Your work email..." />
-        <button class="search-btn" id="searchBtn" onclick="runSearch()">
-          <i class="ti ti-sparkles"></i> Find alternatives
-        </button>
+    <div class="waitlist-wrap" id="waitlistWrap">
+      <div class="waitlist-row">
+        <input type="email" class="waitlist-email" id="waitlistEmail" placeholder="Enter your work email..." />
+        <button class="waitlist-btn" onclick="submitWaitlist()">Join Waitlist</button>
       </div>
+      <div class="waitlist-sub">Free early access · No spam · Unsubscribe anytime</div>
     </div>
-    <div class="hero-sub">Your query helps train Tooltap's AI — no spam, unsubscribe anytime.</div>
-
-    <div class="ai-thinking" id="aiThinking">
-      <i class="ti ti-loader"></i> Analyzing your requirement...
-    </div>
-    <div class="ai-results" id="aiResults"></div>
-    <div class="success-banner" id="successBanner">
-      <i class="ti ti-check"></i> We've got your query! Check your email for personalised recommendations.
+    <div class="waitlist-success" id="waitlistSuccess">
+      ✅ You're on the list! We'll be in touch with early access soon.
     </div>
 
     <div class="hero-stats">
       <div class="stat"><div class="stat-num">500+</div><div class="stat-label">Tools indexed</div></div>
       <div class="stat"><div class="stat-num">10+</div><div class="stat-label">Categories</div></div>
-      <div class="stat"><div class="stat-num">&lt; 5sec</div><div class="stat-label">To find your tool</div></div>
+      <div class="stat"><div class="stat-num">Free</div><div class="stat-label">Always</div></div>
     </div>
   </div>
 </div>
@@ -192,52 +182,57 @@
 <div class="browse" id="alternatives">
   <div class="section-label">Browse by tool</div>
   <div class="section-title">Popular switching journeys</div>
-  <div class="section-sub">Thousands of teams switch from these tools every month. See what they move to.</div>
+  <div class="section-sub">Thousands of teams switch from these tools every month. See what they move to — based on real reviews and community discussions.</div>
 
   <div class="alt-grid">
     <a href="/notion-alternatives" class="alt-pill">
-      <div>
-        <div class="alt-pill-name">Notion alternatives</div>
-        <div class="alt-pill-sub">Docs & knowledge base</div>
-      </div>
+      <div class="alt-pill-left"><div class="alt-pill-name">Notion alternatives</div><div class="alt-pill-sub">Docs & knowledge base</div></div>
       <i class="ti ti-arrow-right alt-pill-arrow"></i>
     </a>
     <a href="/slack-alternatives" class="alt-pill">
-      <div>
-        <div class="alt-pill-name">Slack alternatives</div>
-        <div class="alt-pill-sub">Team communication</div>
-      </div>
+      <div class="alt-pill-left"><div class="alt-pill-name">Slack alternatives</div><div class="alt-pill-sub">Team communication</div></div>
       <i class="ti ti-arrow-right alt-pill-arrow"></i>
     </a>
     <a href="/zoom-alternatives" class="alt-pill">
-      <div>
-        <div class="alt-pill-name">Zoom alternatives</div>
-        <div class="alt-pill-sub">Video conferencing</div>
-      </div>
+      <div class="alt-pill-left"><div class="alt-pill-name">Zoom alternatives</div><div class="alt-pill-sub">Video conferencing</div></div>
       <i class="ti ti-arrow-right alt-pill-arrow"></i>
     </a>
     <a href="/zapier-alternatives" class="alt-pill">
-      <div>
-        <div class="alt-pill-name">Zapier alternatives</div>
-        <div class="alt-pill-sub">Workflow automation</div>
-      </div>
+      <div class="alt-pill-left"><div class="alt-pill-name">Zapier alternatives</div><div class="alt-pill-sub">Workflow automation</div></div>
       <i class="ti ti-arrow-right alt-pill-arrow"></i>
     </a>
     <a href="/jira-alternatives" class="alt-pill">
-      <div>
-        <div class="alt-pill-name">Jira alternatives</div>
-        <div class="alt-pill-sub">Project management</div>
-      </div>
+      <div class="alt-pill-left"><div class="alt-pill-name">Jira alternatives</div><div class="alt-pill-sub">Project management</div></div>
       <i class="ti ti-arrow-right alt-pill-arrow"></i>
     </a>
     <a href="/trello-alternatives" class="alt-pill">
-      <div>
-        <div class="alt-pill-name">Trello alternatives</div>
-        <div class="alt-pill-sub">Kanban boards</div>
-      </div>
+      <div class="alt-pill-left"><div class="alt-pill-name">Trello alternatives</div><div class="alt-pill-sub">Kanban boards</div></div>
+      <i class="ti ti-arrow-right alt-pill-arrow"></i>
+    </a>
+    <a href="/pagerduty-alternatives" class="alt-pill">
+      <div class="alt-pill-left"><div class="alt-pill-name">PagerDuty alternatives</div><div class="alt-pill-sub">Incident management</div></div>
+      <i class="ti ti-arrow-right alt-pill-arrow"></i>
+    </a>
+    <a href="/firebase-alternatives" class="alt-pill">
+      <div class="alt-pill-left"><div class="alt-pill-name">Firebase alternatives</div><div class="alt-pill-sub">Backend as a service</div></div>
+      <i class="ti ti-arrow-right alt-pill-arrow"></i>
+    </a>
+    <a href="/chatgpt-alternatives" class="alt-pill">
+      <div class="alt-pill-left"><div class="alt-pill-name">ChatGPT alternatives</div><div class="alt-pill-sub">AI assistants by use case</div></div>
       <i class="ti ti-arrow-right alt-pill-arrow"></i>
     </a>
   </div>
+
+  <!-- FEATURED: FOUNDER'S GUIDE -->
+  <a href="/founders-guide.html" class="featured-card">
+    <div class="featured-card-icon">🛠️</div>
+    <div class="featured-card-info">
+      <div class="featured-card-label">Featured guide</div>
+      <div class="featured-card-title">Founder's Tool Stack 2026</div>
+      <div class="featured-card-desc">Every tool I use to build Tooltap — non-technical, AI-powered, and under ₹2,500/month.</div>
+    </div>
+    <i class="ti ti-arrow-right featured-card-arrow"></i>
+  </a>
 </div>
 
 <!-- HOW IT WORKS -->
@@ -248,254 +243,144 @@
     <div class="steps">
       <div class="step-card">
         <div class="step-num">1</div>
-        <div class="step-title">Describe your frustration</div>
-        <div class="step-desc">Tell us what tool you're leaving and why — in plain English. No forms, no filters.</div>
+        <div class="step-title">Tell us what you're leaving</div>
+        <div class="step-desc">Browse by tool or join the waitlist — tell us what software you want to replace.</div>
       </div>
       <div class="step-card">
         <div class="step-num">2</div>
-        <div class="step-title">AI finds matches</div>
-        <div class="step-desc">Tooltap's AI analyzes thousands of reviews and switching patterns to surface the best alternatives for your exact situation.</div>
+        <div class="step-title">AI finds your match</div>
+        <div class="step-desc">Tooltap's AI analyzes thousands of reviews and real switching patterns to surface the best alternatives.</div>
       </div>
       <div class="step-card">
         <div class="step-num">3</div>
         <div class="step-title">Compare and switch</div>
-        <div class="step-desc">Compare options, watch intros, signup and start using your new tool today.</div>
+        <div class="step-desc">Read why people switch, compare options side by side, and decide with confidence.</div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- SURVEY -->
+<!-- MINIMAL SURVEY -->
 <div class="survey" id="poll">
-  <div class="section-label">Help us build better</div>
-  <div class="section-title">Shape Tooltap's AI</div>
+  <div class="section-label">Quick feedback</div>
+  <div class="section-title">Help us build better</div>
 
   <div class="poll-wrap">
-    <div class="poll-title">Tell us about your switching journey</div>
-    <div class="poll-sub">60 seconds — your answers train Tooltap's recommendation engine directly.</div>
+    <div class="poll-title">Two questions — 30 seconds</div>
+    <div class="poll-sub">Your answers directly shape what Tooltap builds next.</div>
 
     <div id="pollQuestions">
+
       <div class="poll-q">
-        <div class="poll-q-label">1. What tool are you trying to replace? <span class="required">*</span></div>
+        <div class="poll-q-label">Which tool are you looking to replace? <span style="color:#E24B4A;">*</span></div>
         <div class="poll-options" id="q1">
           <span class="poll-opt" onclick="selectOpt(this,'q1')">Notion</span>
           <span class="poll-opt" onclick="selectOpt(this,'q1')">Slack</span>
           <span class="poll-opt" onclick="selectOpt(this,'q1')">Zoom</span>
           <span class="poll-opt" onclick="selectOpt(this,'q1')">Zapier</span>
           <span class="poll-opt" onclick="selectOpt(this,'q1')">Jira</span>
+          <span class="poll-opt" onclick="selectOpt(this,'q1')">Trello</span>
+          <span class="poll-opt" onclick="selectOpt(this,'q1')">PagerDuty</span>
+          <span class="poll-opt" onclick="selectOpt(this,'q1')">Firebase</span>
+          <span class="poll-opt" onclick="selectOpt(this,'q1')">ChatGPT</span>
           <span class="poll-opt" onclick="selectOpt(this,'q1')">Other</span>
         </div>
       </div>
 
       <div class="poll-q">
-        <div class="poll-q-label">2. Why are you looking to switch? <span class="required">*</span></div>
+        <div class="poll-q-label">Why are you switching? <span style="color:#E24B4A;">*</span></div>
         <div class="poll-options" id="q2">
           <span class="poll-opt" onclick="selectOpt(this,'q2')">Too expensive</span>
           <span class="poll-opt" onclick="selectOpt(this,'q2')">Missing features</span>
           <span class="poll-opt" onclick="selectOpt(this,'q2')">Too complex</span>
           <span class="poll-opt" onclick="selectOpt(this,'q2')">Slow performance</span>
           <span class="poll-opt" onclick="selectOpt(this,'q2')">Better alternative exists</span>
+          <span class="poll-opt" onclick="selectOpt(this,'q2')">Other</span>
         </div>
       </div>
 
       <div class="poll-q">
-        <div class="poll-q-label">3. How long have you been searching? <span class="required">*</span></div>
-        <div class="poll-options" id="q3">
-          <span class="poll-opt" onclick="selectOpt(this,'q3')">Just started</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q3')">Days</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q3')">Weeks</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q3')">Months</span>
-        </div>
+        <div class="poll-q-label">Your email <span style="color:#E24B4A;">*</span></div>
+        <input type="email" class="poll-email" id="pollEmail" placeholder="you@company.com" />
       </div>
 
-      <div class="poll-q">
-        <div class="poll-q-label">4. What's blocking you from deciding? <span class="required">*</span></div>
-        <div class="poll-options" id="q4">
-          <span class="poll-opt" onclick="selectOpt(this,'q4')">Too many options</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q4')">Hard to compare</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q4')">Fake reviews</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q4')">Takes too long</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q4')">No personalisation</span>
-        </div>
-      </div>
-
-      <div class="poll-q">
-        <div class="poll-q-label">5. How do you currently research alternatives? <span class="required">*</span></div>
-        <div class="poll-options" id="q5">
-          <span class="poll-opt" onclick="selectOpt(this,'q5')">Google search</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q5')">Product Hunt</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q5')">Word of mouth</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q5')">LinkedIn / Twitter / Reddit</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q5')">No system</span>
-        </div>
-      </div>
-
-      <div class="poll-q">
-        <div class="poll-q-label">6. Open to a 15-minute feedback call? <span class="required">*</span></div>
-        <div class="poll-options" id="q6">
-          <span class="poll-opt" onclick="selectOpt(this,'q6')">Yes — happy to jump on a call</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q6')">Maybe — depends on timing</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q6')">No — prefer not to</span>
-        </div>
-      </div>
-
-      <div class="poll-q">
-        <div class="poll-q-label">7. Your email <span class="required">*</span></div>
-        <input type="email" class="poll-input" id="pollEmail" placeholder="you@company.com" />
-      </div>
-
-      <div class="poll-q">
-        <div class="poll-q-label">8. Your LinkedIn <span style="font-weight:400;color:#999;">(optional)</span></div>
-        <input type="url" class="poll-input" id="pollLinkedIn" placeholder="https://linkedin.com/in/yourname" />
-      </div>
-
-      <button class="poll-btn" id="pollBtn" onclick="submitPoll()">
-        Submit answers <i class="ti ti-send"></i>
-      </button>
+      <button class="poll-btn" id="pollBtn" onclick="submitPoll()">Submit feedback</button>
     </div>
 
     <div class="poll-success" id="pollSuccess">
-      <i class="ti ti-circle-check"></i>
+      <span class="poll-success-icon">✅</span>
       <h3>Thank you!</h3>
-      <p>Your answers directly shape Tooltap's AI. We'll be in touch soon.</p>
+      <p>Your answer directly shapes Tooltap's AI. We'll be in touch soon.</p>
     </div>
   </div>
 </div>
 
+<!-- FOOTER -->
 <footer class="footer">
   <img src="https://raw.githubusercontent.com/tooltaphq/tooltap-assets/main/logo/primary/Primary_logo-2.png" alt="Tooltap" class="footer-logo">
   <div class="footer-links">
+    <a href="/founders-guide.html">Founder's Guide</a>
     <a href="mailto:founder@tooltap.in">Contact</a>
     <a href="#">Privacy</a>
     <a href="#">Terms</a>
-    <a href="#">For companies</a>
     <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://tooltap.in" target="_blank"><i class="ti ti-brand-linkedin"></i> Share</a>
   </div>
   <p>© 2026 Tooltap. Find any software tool — using AI.</p>
 </footer>
 
 <script>
-const ANTHROPIC_MODEL = 'claude-sonnet-4-20250514';
+function submitWaitlist(){
+  const email = document.getElementById('waitlistEmail').value.trim();
+  const input = document.getElementById('waitlistEmail');
+  if(!email || !email.includes('@')){
+    input.style.borderColor = 'rgba(226,75,74,0.6)';
+    input.focus();
+    return;
+  }
+  input.style.borderColor = '';
+  document.getElementById('w_email').value = email;
+  document.getElementById('waitlistForm').submit();
+  document.getElementById('waitlistWrap').style.display = 'none';
+  document.getElementById('waitlistSuccess').style.display = 'block';
+}
 
-function selectOpt(el,group){
+function selectOpt(el, group){
   document.querySelectorAll('#'+group+' .poll-opt').forEach(o=>o.classList.remove('selected'));
   el.classList.add('selected');
 }
 
-async function runSearch(){
-  const query = document.getElementById('searchQuery').value.trim();
-  const email = document.getElementById('searchEmail').value.trim();
-  if(!query || query.length < 10){
-    document.getElementById('searchQuery').style.borderColor='rgba(226,75,74,0.6)';
+function submitPoll(){
+  const q1 = document.querySelector('#q1 .selected');
+  const q2 = document.querySelector('#q2 .selected');
+  const email = document.getElementById('pollEmail').value.trim();
+  if(!q1 || !q2){
+    alert('Please answer both questions.');
     return;
   }
   if(!email || !email.includes('@')){
-    document.getElementById('searchEmail').style.borderColor='rgba(226,75,74,0.6)';
-    return;
-  }
-  document.getElementById('searchQuery').style.borderColor='';
-  document.getElementById('searchEmail').style.borderColor='';
-
-  const btn = document.getElementById('searchBtn');
-  btn.disabled = true;
-  btn.innerHTML = '<i class="ti ti-loader"></i> Analyzing...';
-  document.getElementById('aiThinking').style.display = 'block';
-  document.getElementById('aiResults').style.display = 'none';
-
-  // Save to Google Sheets
-  document.getElementById('w_email').value = email;
-  document.getElementById('waitlistForm').submit();
-
-  try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        model: ANTHROPIC_MODEL,
-        max_tokens: 1000,
-        system: `You are Tooltap's AI — a software switching intelligence engine. 
-        Based on the user's description of what they want to replace and why, recommend exactly 3 alternative tools.
-        Return ONLY valid JSON, no markdown:
-        {"tools":[{"name":"Tool Name","why":"One sentence why this fits their specific situation","best_for":"Short use case","url":"https://tool.com","pricing":"Free / From $X/mo"}]}`,
-        messages: [{role: 'user', content: query}]
-      })
-    });
-    const data = await res.json();
-    const text = data.content.map(i=>i.text||'').join('');
-    const parsed = JSON.parse(text.replace(/```json|```/g,'').trim());
-
-    document.getElementById('aiThinking').style.display = 'none';
-    const resultsDiv = document.getElementById('aiResults');
-    resultsDiv.style.display = 'block';
-    resultsDiv.innerHTML = `
-      <div class="ai-results-label">✨ Based on your requirement — here are your best alternatives:</div>
-      ${parsed.tools.map((t,i)=>`
-        <div class="ai-result-card ${i===0?'top':''}">
-          <div class="ai-result-name">
-            ${t.name}
-            ${i===0?'<span class="ai-result-badge">Best match</span>':''}
-          </div>
-          <div class="ai-result-why">${t.why}</div>
-          <div style="display:flex;justify-content:space-between;align-items:center;">
-            <span style="font-size:12px;color:rgba(255,255,255,0.4);">${t.pricing}</span>
-            <a href="${t.url}" target="_blank" class="ai-result-link">Visit ${t.name} <i class="ti ti-arrow-right"></i></a>
-          </div>
-        </div>
-      `).join('')}
-      <div style="font-size:12px;color:rgba(255,255,255,0.3);margin-top:0.5rem;text-align:center;">Results sent to your email · <a href="#alternatives" style="color:#378ADD;">Browse all alternatives →</a></div>
-    `;
-  } catch(e) {
-    document.getElementById('aiThinking').style.display = 'none';
-    document.getElementById('successBanner').style.display = 'block';
-  }
-
-  btn.disabled = false;
-  btn.innerHTML = '<i class="ti ti-sparkles"></i> Find alternatives';
-}
-
-function submitPoll(){
-  const q1=document.querySelector('#q1 .selected');
-  const q2=document.querySelector('#q2 .selected');
-  const q3=document.querySelector('#q3 .selected');
-  const q4=document.querySelector('#q4 .selected');
-  const q5=document.querySelector('#q5 .selected');
-  const q6=document.querySelector('#q6 .selected');
-  const email=document.getElementById('pollEmail').value.trim();
-  const linkedin=document.getElementById('pollLinkedIn').value.trim();
-
-  if(!q1||!q2||!q3||!q4||!q5||!q6){
-    alert('Please answer all 6 questions to continue.');
-    return;
-  }
-  if(!email||!email.includes('@')){
-    document.getElementById('pollEmail').style.borderColor='rgba(226,75,74,0.6)';
+    document.getElementById('pollEmail').style.borderColor = 'rgba(226,75,74,0.6)';
     document.getElementById('pollEmail').focus();
     return;
   }
-  document.getElementById('pollEmail').style.borderColor='';
-
-  const btn=document.getElementById('pollBtn');
-  btn.disabled=true;
-  btn.innerHTML='Submitting... <i class="ti ti-loader"></i>';
-
-  document.getElementById('f_q1').value=q1.textContent.trim();
-  document.getElementById('f_q2').value=q2.textContent.trim();
-  document.getElementById('f_q3').value=q3.textContent.trim();
-  document.getElementById('f_q4').value=q4.textContent.trim();
-  document.getElementById('f_q5').value=q5.textContent.trim();
-  document.getElementById('f_q6').value=q6.textContent.trim();
-  document.getElementById('f_email').value=email;
-  document.getElementById('f_linkedin').value=linkedin;
+  document.getElementById('pollEmail').style.borderColor = '';
+  const btn = document.getElementById('pollBtn');
+  btn.disabled = true;
+  btn.textContent = 'Submitting...';
+  document.getElementById('f_q1').value = q1.textContent.trim();
+  document.getElementById('f_q2').value = q2.textContent.trim();
+  document.getElementById('f_email').value = email;
   document.getElementById('pollForm').submit();
-
   setTimeout(()=>{
-    document.getElementById('pollQuestions').style.display='none';
-    document.getElementById('pollSuccess').style.display='block';
-  },800);
+    document.getElementById('pollQuestions').style.display = 'none';
+    document.getElementById('pollSuccess').style.display = 'block';
+  }, 800);
 }
 
-document.getElementById('searchQuery').addEventListener('keydown', function(e){
-  if(e.key==='Enter' && !e.shiftKey){ e.preventDefault(); runSearch(); }
+// Allow Enter key on email
+document.addEventListener('DOMContentLoaded', function(){
+  document.getElementById('waitlistEmail').addEventListener('keydown', function(e){
+    if(e.key === 'Enter') submitWaitlist();
+  });
 });
 </script>
 </body>
