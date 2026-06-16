@@ -133,6 +133,7 @@
 <form id="waitlistForm"
   action="https://docs.google.com/forms/d/e/1FAIpQLSf8twlrE7wHAsSNQ-GUkyH-4pBYlFMFtQ4EK602q3M4XEXEiQ/formResponse"
   method="POST" target="hiddenFrame" style="display:none;">
+  <input type="text" name="entry.1920689271" id="w_tool" />
   <input type="email" name="entry.1696180610" id="w_email" />
 </form>
 
@@ -296,7 +297,8 @@
 </footer>
 
 <script>
-function submitWaitlist(){
+function submitWaitlist()
+{
   const toolRequest = document.getElementById('toolRequest').value.trim();
   const email = document.getElementById('waitlistEmail').value.trim();
   const toolInput = document.getElementById('toolRequest');
@@ -315,6 +317,14 @@ function submitWaitlist(){
   toolInput.style.borderColor = '';
   emailInput.style.borderColor = '';
 
+  document.getElementById('w_tool').value = toolRequest;
+  document.getElementById('w_email').value = email;
+  document.getElementById('waitlistForm').submit();
+
+  document.getElementById('waitlistWrap').style.display = 'none';
+  document.getElementById('waitlistSuccess').style.display = 'block';
+}
+ 
   // Save tool request + email into the poll form (acts as "what to build next" tracker)
   document.getElementById('f_q1').value = toolRequest;
   document.getElementById('f_q2').value = 'Homepage build request';
