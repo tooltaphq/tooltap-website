@@ -1,17 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J86Q6FE58W"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-J86Q6FE58W', {
-    page_path: window.location.pathname
-  });
-</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J86Q6FE58W"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-J86Q6FE58W', { page_path: window.location.pathname }); </script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tooltap. — Find the right tool, using AI.</title>
@@ -33,11 +25,16 @@
   .nav-links a:hover{color:#fff;}
   .nav-cta{background:#378ADD;color:#fff !important;padding:6px 16px;border-radius:6px;font-size:13px;}
 
-  .hero-content{max-width:580px;margin:0 auto;text-align:center;}
+  .hero-content{max-width:640px;margin:0 auto;text-align:center;}
   .hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(55,138,221,0.15);border:0.5px solid rgba(55,138,221,0.3);color:#85B7EB;font-size:12px;padding:4px 12px;border-radius:20px;margin-bottom:1.5rem;}
   .hero h1{font-size:40px;font-weight:500;color:#fff;line-height:1.2;margin-bottom:1rem;}
   .hero h1 span{color:#378ADD;}
   .hero p{font-size:15px;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:2rem;max-width:440px;margin-left:auto;margin-right:auto;}
+
+  /* QUICK BROWSE — in hero */
+  .quick-browse{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:1.75rem;}
+  .qb-pill{font-size:13px;color:rgba(255,255,255,0.75);text-decoration:none;padding:6px 14px;border-radius:20px;border:0.5px solid rgba(255,255,255,0.18);background:rgba(255,255,255,0.06);transition:all 0.15s;}
+  .qb-pill:hover{background:rgba(55,138,221,0.2);border-color:rgba(55,138,221,0.5);color:#fff;}
 
   /* WAITLIST */
   .waitlist-wrap{max-width:480px;margin:0 auto 0.75rem;}
@@ -160,7 +157,6 @@
     <div class="nav-links">
       <a href="#alternatives">Browse</a>
       <a href="/founders-guide.html">Founder's Guide</a>
-      <a href="#poll">Feedback</a>
       <a href="mailto:founder@tooltap.in">Contact</a>
     </div>
   </nav>
@@ -168,17 +164,32 @@
   <div class="hero-content">
     <div class="hero-badge"><i class="ti ti-sparkles"></i> AI-powered software discovery — now in beta</div>
     <h1>Find the right tool.<br><span>Using AI.</span></h1>
-    <p>Thinking of switching software? Join the waitlist — we'll send you the best alternatives for your use case.</p>
+    <p>Thinking of switching software? See what teams switch to — based on real reviews and community discussions.</p>
+
+    <!-- QUICK BROWSE PILLS — immediate value -->
+    <div class="quick-browse">
+      <a href="/notion-alternatives" class="qb-pill">Notion →</a>
+      <a href="/slack-alternatives" class="qb-pill">Slack →</a>
+      <a href="/zoom-alternatives" class="qb-pill">Zoom →</a>
+      <a href="/zapier-alternatives" class="qb-pill">Zapier →</a>
+      <a href="/jira-alternatives" class="qb-pill">Jira →</a>
+      <a href="/trello-alternatives" class="qb-pill">Trello →</a>
+      <a href="/pagerduty-alternatives" class="qb-pill">PagerDuty →</a>
+      <a href="/firebase-alternatives" class="qb-pill">Firebase →</a>
+      <a href="/chatgpt-alternatives" class="qb-pill">ChatGPT →</a>
+    </div>
 
     <div class="waitlist-wrap" id="waitlistWrap">
+      <div class="poll-q-label" style="color:rgba(255,255,255,0.8);margin-bottom:10px;text-align:left;">What tool should we cover next? <span style="color:#FF8A80;">*</span></div>
+      <input type="text" class="waitlist-email" id="toolRequest" placeholder="e.g. HubSpot, Figma, Salesforce..." style="margin-bottom:8px;width:100%;" />
       <div class="waitlist-row">
-        <input type="email" class="waitlist-email" id="waitlistEmail" placeholder="Enter your work email..." />
-        <button class="waitlist-btn" onclick="submitWaitlist()">Join Waitlist</button>
+        <input type="email" class="waitlist-email" id="waitlistEmail" placeholder="Your email — we'll notify you" />
+        <button class="waitlist-btn" onclick="submitWaitlist()">Notify me</button>
       </div>
-      <div class="waitlist-sub">Free early access · No spam · Unsubscribe anytime</div>
+      <div class="waitlist-sub">Your answer shapes what Tooltap builds next · No spam</div>
     </div>
     <div class="waitlist-success" id="waitlistSuccess">
-      ✅ You're on the list! We'll be in touch with early access soon.
+      ✅ Got it — you're first in line when it's live!
     </div>
 
     <div class="hero-stats">
@@ -189,7 +200,7 @@
   </div>
 </div>
 
-<!-- BROWSE ALTERNATIVES -->
+<!-- BROWSE ALTERNATIVES — full detail -->
 <div class="browse" id="alternatives">
   <div class="section-label">Browse by tool</div>
   <div class="section-title">Popular switching journeys</div>
@@ -271,61 +282,6 @@
   </div>
 </div>
 
-<!-- MINIMAL SURVEY -->
-<div class="survey" id="poll">
-  <div class="section-label">Quick feedback</div>
-  <div class="section-title">Help us build better</div>
-
-  <div class="poll-wrap">
-    <div class="poll-title">Two questions — 30 seconds</div>
-    <div class="poll-sub">Your answers directly shape what Tooltap builds next.</div>
-
-    <div id="pollQuestions">
-
-      <div class="poll-q">
-        <div class="poll-q-label">Which tool are you looking to replace? <span style="color:#E24B4A;">*</span></div>
-        <div class="poll-options" id="q1">
-          <span class="poll-opt" onclick="selectOpt(this,'q1')">Notion</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q1')">Slack</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q1')">Zoom</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q1')">Zapier</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q1')">Jira</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q1')">Trello</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q1')">PagerDuty</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q1')">Firebase</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q1')">ChatGPT</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q1')">Other</span>
-        </div>
-      </div>
-
-      <div class="poll-q">
-        <div class="poll-q-label">Why are you switching? <span style="color:#E24B4A;">*</span></div>
-        <div class="poll-options" id="q2">
-          <span class="poll-opt" onclick="selectOpt(this,'q2')">Too expensive</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q2')">Missing features</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q2')">Too complex</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q2')">Slow performance</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q2')">Better alternative exists</span>
-          <span class="poll-opt" onclick="selectOpt(this,'q2')">Other</span>
-        </div>
-      </div>
-
-      <div class="poll-q">
-        <div class="poll-q-label">Your email <span style="color:#E24B4A;">*</span></div>
-        <input type="email" class="poll-email" id="pollEmail" placeholder="you@company.com" />
-      </div>
-
-      <button class="poll-btn" id="pollBtn" onclick="submitPoll()">Submit feedback</button>
-    </div>
-
-    <div class="poll-success" id="pollSuccess">
-      <span class="poll-success-icon">✅</span>
-      <h3>Thank you!</h3>
-      <p>Your answer directly shapes Tooltap's AI. We'll be in touch soon.</p>
-    </div>
-  </div>
-</div>
-
 <!-- FOOTER -->
 <footer class="footer">
   <img src="https://raw.githubusercontent.com/tooltaphq/tooltap-assets/main/logo/primary/Primary_logo-2.png" alt="Tooltap" class="footer-logo">
@@ -341,56 +297,41 @@
 
 <script>
 function submitWaitlist(){
+  const toolRequest = document.getElementById('toolRequest').value.trim();
   const email = document.getElementById('waitlistEmail').value.trim();
-  const input = document.getElementById('waitlistEmail');
-  if(!email || !email.includes('@')){
-    input.style.borderColor = 'rgba(226,75,74,0.6)';
-    input.focus();
+  const toolInput = document.getElementById('toolRequest');
+  const emailInput = document.getElementById('waitlistEmail');
+
+  if(!toolRequest){
+    toolInput.style.borderColor = 'rgba(226,75,74,0.6)';
+    toolInput.focus();
     return;
   }
-  input.style.borderColor = '';
-  document.getElementById('w_email').value = email;
-  document.getElementById('waitlistForm').submit();
+  if(!email || !email.includes('@')){
+    emailInput.style.borderColor = 'rgba(226,75,74,0.6)';
+    emailInput.focus();
+    return;
+  }
+  toolInput.style.borderColor = '';
+  emailInput.style.borderColor = '';
+
+  // Save tool request + email into the poll form (acts as "what to build next" tracker)
+  document.getElementById('f_q1').value = toolRequest;
+  document.getElementById('f_q2').value = 'Homepage build request';
+  document.getElementById('f_email').value = email;
+  document.getElementById('pollForm').submit();
+
   document.getElementById('waitlistWrap').style.display = 'none';
   document.getElementById('waitlistSuccess').style.display = 'block';
 }
 
-function selectOpt(el, group){
-  document.querySelectorAll('#'+group+' .poll-opt').forEach(o=>o.classList.remove('selected'));
-  el.classList.add('selected');
-}
-
-function submitPoll(){
-  const q1 = document.querySelector('#q1 .selected');
-  const q2 = document.querySelector('#q2 .selected');
-  const email = document.getElementById('pollEmail').value.trim();
-  if(!q1 || !q2){
-    alert('Please answer both questions.');
-    return;
-  }
-  if(!email || !email.includes('@')){
-    document.getElementById('pollEmail').style.borderColor = 'rgba(226,75,74,0.6)';
-    document.getElementById('pollEmail').focus();
-    return;
-  }
-  document.getElementById('pollEmail').style.borderColor = '';
-  const btn = document.getElementById('pollBtn');
-  btn.disabled = true;
-  btn.textContent = 'Submitting...';
-  document.getElementById('f_q1').value = q1.textContent.trim();
-  document.getElementById('f_q2').value = q2.textContent.trim();
-  document.getElementById('f_email').value = email;
-  document.getElementById('pollForm').submit();
-  setTimeout(()=>{
-    document.getElementById('pollQuestions').style.display = 'none';
-    document.getElementById('pollSuccess').style.display = 'block';
-  }, 800);
-}
-
-// Allow Enter key on email
+// Allow Enter key on email field
 document.addEventListener('DOMContentLoaded', function(){
   document.getElementById('waitlistEmail').addEventListener('keydown', function(e){
     if(e.key === 'Enter') submitWaitlist();
+  });
+  document.getElementById('toolRequest').addEventListener('keydown', function(e){
+    if(e.key === 'Enter') document.getElementById('waitlistEmail').focus();
   });
 });
 </script>
